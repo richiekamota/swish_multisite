@@ -1,33 +1,55 @@
 <?php
-class Room extends DataObject {
-    private static $db = array(
+
+class Room extends DataObject
+{
+    // Contact object's fields
+    public static $db = array(
         'Name' => 'Varchar(255)',
+        'Description' => 'HTMLText',
         'Bedrooms' => 'Int',
         'Bathrooms' => 'Int',
         'FloorNumber' => 'Int',
         'Price' => 'Varchar(255)',
-        'AvailabilityStatus' => 'Enum("Available", Not Available")',
+        'AvailabilityStatus' => 'Enum("Available,Not Available")',
         'AvailabilityDate' => 'SSDatetime',
-        'SortOrder' => 'Int'
+        'SortID' => 'Int'
     );
 
-    static $summary_fields = array(
-        'Name' => 'Name'
-         'Price' => 'Price'
-          'AvailabilityStatus' => 'Availability'
+    // One-to-one relationship with profile picture and contact list page
+    public static $has_one = array(
+        'Thumbnail'       => 'Image',
+        'MainImage'       => 'Image',
+        'Apartment' => 'Apartment'
     );
 
-    private static $default_sort='SortOrder';
+    // Summary fields
+    public static $summary_fields = array(
+        'Name'      => 'Name',
+        'Price' => 'Price',
+        'AvailabilityStatus'   => 'Availability'
+    );
 
+    public function getCMSFields()
+    {
 
-    public function getCMSFields() {
+        // Profile picture field
+        $thumbField = new UploadField('Thumbnail', 'Thumbnail');
+        $thumbField->allowedExtensions = array('jpg', 'png', 'gif');
 
-        $fields = FieldList::create(
-            TextField::create('Name'),
-            TreeDropdownField::create("Link", "Page to link to:", "SiteTree")
+        $imageField = new UploadField('MainImage', 'Main Image');
+        $imageField->allowedExtensions = array('jpg', 'png', 'gif');
+
+        // Name, Description and Website fields
+        return new FieldList(
+            new TextField('Name', 'Name'),
+            new TextField('Bedrooms', 'Bedrooms'),
+            new TextField('Bathrooms', 'Bathrooms'),
+            new TextField('FloorNumber', 'Floor Number'),
+            new TextareaField('Price', 'Price'),
+            new HTMLEditorField('Description', 'Description'),
+            $thumbField,
+            $imageField
         );
 
-        return $fields;
     }
-
 }

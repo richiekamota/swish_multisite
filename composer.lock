@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7cf8bce4f9753d1c842241bb1632d0d",
+    "content-hash": "382170f3238d7e43e344c81f6a12e2c8",
     "packages": [
         {
             "name": "composer/installers",
@@ -399,6 +399,46 @@
                 "subsites"
             ],
             "time": "2017-08-25T04:44:47+00:00"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "0.6.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "2b03ab81f73511241016844b4a7969c218fd99d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/2b03ab81f73511241016844b4a7969c218fd99d2",
+                "reference": "2b03ab81f73511241016844b4a7969c218fd99d2",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1 <4.0.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2017-08-14T12:38:34+00:00"
         }
     ],
     "packages-dev": [
