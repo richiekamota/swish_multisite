@@ -5,13 +5,17 @@ class Room extends DataObject
     // Contact object's fields
     public static $db = array(
         'Name' => 'Varchar(255)',
+        'FloorNumber' => 'Int',
+        'UnitNumber' => 'Int',
         'Description' => 'HTMLText',
+        'InteriorSize' => 'Int',
+        'ExteriorSize' => 'Int',
+        'TotalSize' => 'Int',
         'Bedrooms' => 'Int',
         'Bathrooms' => 'Int',
-        'FloorNumber' => 'Int',
         'Price' => 'Varchar(255)',
         'AvailabilityStatus' => 'Enum("Available,Not Available")',
-        'AvailabilityDate' => 'SSDatetime',
+        'AvailabilityDate' => 'Date',
         'SortID' => 'Int'
     );
 
@@ -42,13 +46,20 @@ class Room extends DataObject
         // Name, Description and Website fields
         return new FieldList(
             new TextField('Name', 'Name'),
+            new TextField('Price', 'Price'),
+            new TextField('FloorNumber', 'Floor Number'),
+            new TextField('UnitNumber', 'Unit Number'),
+            new DropdownField('AvailabilityStatus', 'Availability', singleton('Room')->dbObject('AvailabilityStatus')->enumValues()),
+            new DateField('AvailabilityDate', 'Availability Date'),
             new TextField('Bedrooms', 'Bedrooms'),
             new TextField('Bathrooms', 'Bathrooms'),
-            new TextField('FloorNumber', 'Floor Number'),
-            new TextareaField('Price', 'Price'),
-            new HTMLEditorField('Description', 'Description'),
+            new TextField('InteriorSize', 'InteriorSize'),
+            new TextField('ExteriorSize', 'ExteriorSize'),
+            new TextField('TotalSize', 'TotalSize'),
             $thumbField,
-            $imageField
+            $imageField,
+            new HTMLEditorField('Description', 'Description')
+
         );
 
     }
