@@ -22,6 +22,9 @@ class Apartment extends Page
         'Floors' => 'Floor'
     );
 
+    public static $allowed_actions = array(
+        'floors'
+    );
 
     public function getCMSFields()
     {
@@ -66,5 +69,4 @@ class Apartment extends Page
 
         return $fields;
     }
-
 }

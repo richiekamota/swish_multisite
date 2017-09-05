@@ -16,21 +16,23 @@ class Room extends DataObject
         'Price' => 'Varchar(255)',
         'AvailabilityStatus' => 'Enum("Available,Not Available")',
         'AvailabilityDate' => 'Date',
+        'SubsiteID' => 'Int',
         'SortID' => 'Int'
     );
 
     // One-to-one relationship with profile picture and contact list page
     public static $has_one = array(
-        'Thumbnail'       => 'Image',
-        'MainImage'       => 'Image',
-        'Apartment' => 'Apartment'
+        'Thumbnail' => 'Image',
+        'MainImage' => 'Image',
+        'Apartment' => 'Apartment',
+        'Subsite' => 'Subsite'
     );
 
     // Summary fields
     public static $summary_fields = array(
-        'Name'      => 'Name',
+        'Name' => 'Name',
         'Price' => 'Price',
-        'AvailabilityStatus'   => 'Availability'
+        'AvailabilityStatus' => 'Availability'
     );
 
     public function getCMSFields()
@@ -42,6 +44,7 @@ class Room extends DataObject
 
         $imageField = new UploadField('MainImage', 'Main Image');
         $imageField->allowedExtensions = array('jpg', 'png', 'gif');
+
 
         // Name, Description and Website fields
         return new FieldList(
@@ -55,6 +58,7 @@ class Room extends DataObject
             new TextField('Bathrooms', 'Bathrooms'),
             new TextField('InteriorSize', 'InteriorSize'),
             new TextField('ExteriorSize', 'ExteriorSize'),
+            new HiddenField('SubsiteID','SubsiteID', Subsite::currentSubsiteID()),
             new TextField('TotalSize', 'TotalSize'),
             $thumbField,
             $imageField,

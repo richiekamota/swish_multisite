@@ -1,0 +1,8 @@
+---
+Name: roomsroute
+After: 'framework/routes#coreroutes'
+---
+Director:
+  rules:
+    'property/floors//$ID': 'Rooms_Controller'
+---

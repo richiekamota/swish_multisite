@@ -1,9 +1,10 @@
 <div class="banner" <% if $Banner.URL %>style="background-image: url($Banner.URL)" <% end_if %>>
     <div class="container">
         <h1>$Title</h1>
+        <div class="bannerScroll"><a href="#bannerBottom">SCROLL</a></div>
     </div>
 </div>
-<div class="container">
+<div class="container" name="bannerBottom" id="bannerBottom">
 
     <article>
 

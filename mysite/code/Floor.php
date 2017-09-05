@@ -11,14 +11,15 @@ class Floor extends DataObject
 
     // One-to-one relationship with profile picture and contact list page
     public static $has_one = array(
-        'Thumbnail'       => 'Image',
-        'MainImage'       => 'Image',
-        'Apartment' => 'Apartment'
+        'Thumbnail' => 'Image',
+        'MainImage' => 'Image',
+        'Apartment' => 'Apartment',
+        'Subsite' => 'Subsite'
     );
 
     // Summary fields
     public static $summary_fields = array(
-        'Name'      => 'Name',
+        'Name' => 'Name',
     );
 
     public function getCMSFields()
@@ -31,10 +32,12 @@ class Floor extends DataObject
         $imageField = new UploadField('MainImage', 'Main Image');
         $imageField->allowedExtensions = array('jpg', 'png', 'gif');
 
+
         // Name, Description and Website fields
         return new FieldList(
             new TextField('Name', 'Name'),
             new TextField('FloorNumber', 'Floor Number'),
+            new HiddenField('SubsiteID','SubsiteID', Subsite::currentSubsiteID()),
             $thumbField,
             $imageField
 

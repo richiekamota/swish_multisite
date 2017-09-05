@@ -29,6 +29,10 @@ p {
     font-weight: 300;
     line-height: 1.63;
     text-align: left;
+}
+
+strong {
+    font-weight: 500;
     color: #1f1f1f;
 }
 
@@ -38,6 +42,23 @@ p {
 
 * {
     font-family: 'Lato', sans-serif;
+}
+
+.breadcrumb {
+    padding: 30px 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    background: none;
+    border-radius: 0px;
+}
+
+.breadcrumb a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    text-align: center;
+    color: #e75300;
+    text-decoration: none;
 }
 
 .navbar {
@@ -195,6 +216,28 @@ p {
     font-size: 80px;
 }
 
+.bannerScroll {
+    text-align: center;
+    color: #ffffff;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    text-transform: uppercase;
+    left: 0;
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+.bannerScroll a {
+    font-weight: 500;
+    line-height: 1.92;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+}
+
 .home-banner {
     height: 400px;
     background: #666 url(../images/background.jpg);
@@ -254,7 +297,7 @@ p {
     float: left;
 }
 
-.content-block .contentBody,  .property-caption .contentBody {
+.content-block .contentBody, .property-caption .contentBody {
     float: left;
     width: 100%;
     margin: 97px 0px 50px;
@@ -274,6 +317,10 @@ p {
 }
 
 /*-------------- PAGE -------------------*/
+
+article.padded {
+    margin: 300px auto 100px;
+}
 
 .Contact article {
     margin-top: 400px;
@@ -417,24 +464,25 @@ article .property-details-table tr td:nth-child(2) {
     margin-top: -182px;
     width: 100%;
     height: 200px;
-    background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 51%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 57%, rgba(0,0,0,1) 73%);
-    background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0) 51%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 57%,rgba(0,0,0,1) 73%);
-    background: linear-gradient(177deg, rgba(0,0,0,0) 51%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 57%,rgba(0,0,0,1) 73%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+    background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 73%);
+    background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 73%);
+    background: linear-gradient(177deg, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 73%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1);
 }
 
 .bottom {
-    background-color:#000;
+    background-color: #000;
     padding: 50px 0px 100px;
 }
 
-.property-plan img{
+.property-plan img {
     max-width: 100%;
     margin-top: -200px;
     position: relative;
     z-index: -1;
 }
-.price-info p{
+
+.price-info p {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.92;
@@ -445,8 +493,8 @@ article .property-details-table tr td:nth-child(2) {
     width: 100%;
 }
 
-.price-button{
-    float:left;
+.price-button {
+    float: left;
     background-color: #ffffff;
     border: solid 1px #8c8c8c;
     font-size: 17px;
@@ -456,13 +504,13 @@ article .property-details-table tr td:nth-child(2) {
     color: #1f1f1f;
     margin-top: 30px;
     padding: 10px 40px;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .price-button:hover {
     background: #e75300;
     color: #FFF;
-    text-decoration:none;
+    text-decoration: none;
     border: 1px solid #e75300;
 }
 
@@ -492,9 +540,37 @@ article .property-details-table tr td:nth-child(2) {
     color: #ffffff;
 }
 
-.property-caption .contentBody p strong{
+.property-caption .contentBody p strong {
     color: #8c8c8c;
     font-weight: normal
+}
+
+#property-details {
+padding: 150px 20px;
+}
+
+#property-details .floorList {
+    float: left;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.floorList li{
+    float: left;
+    width: 12.5%;
+}
+
+.floorList li a{
+    font-size: 30px;
+    line-height: 1.33;
+    color: #8c8c8c;
+    text-decoration: none;
+    font-weight: 500
+}
+
+.floorList li a:hover{
+    color: #000000;
 }
 
 /*--------------- FOOTER -------------------*/
