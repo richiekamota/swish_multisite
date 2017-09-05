@@ -1,35 +1,79 @@
 /* CSS Document for user  */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container {
+        width: 970px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1440px;
+    }
+
+}
+
+p {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.63;
+    text-align: left;
+    color: #1f1f1f;
+}
+
+.small-text {
+    font-size: 22px !important;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
 
 .navbar {
     border-radius: 0;
     margin-bottom: 0;
     height: 134px;
     background-color: #1f1f1f;
+    position: absolute;
+    width: 100%;
 }
 
 .HomePage .navbar {
-    background:none
+    background: none
 }
 
-.navbar .navbar-brand strong{
-    font-size: 25px;
-    letter-spacing: 3.6px;
+.navbar .navbar-brand strong {
     text-align: left;
     color: #ffffff;
     width: 100%;
-    float:left;
+    float: left;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 9px;
 }
 
 .navbar .navbar-brand span {
     height: 14px;
     opacity: 0.5;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 3.7px;
+    font-weight: 400;
     text-align: left;
     color: #ffffff;
     width: 100%;
-    float:left;
+    float: left;
+    letter-spacing: 7.3px;
+    font-size: 12px;
+    margin-top: 8px;
 }
 
 .navbar .icon-bar {
@@ -40,6 +84,9 @@
 .navbar li a {
     color: #FFFFFF;
     text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+    padding: 15px 25px;
 }
 
 .navbar li.section > a,
@@ -129,22 +176,23 @@
     background-size: cover;
     background-position: center center;
     position: relative;
-    min-height: 700px;
+    min-height: 100vh;
 
 }
 
 .banner .container > h1 {
-    font-size: 65px;
-    letter-spacing: 11.8px;
     text-align: center;
     color: #ffffff;
     float: left;
     width: 100%;
     /* margin-top: 200px; */
     position: absolute;
-    top: 40%;
+    top: 50%;
     text-transform: uppercase;
     left: 0;
+    font-weight: 300;
+    letter-spacing: 20px;
+    font-size: 80px;
 }
 
 .home-banner {
@@ -171,9 +219,10 @@
 
 /*---------------- HOME PAGE -------------------*/
 
-.main-area.home > .container > h1{
-    font-size: 65px;
-    letter-spacing: 11.8px;
+.main-area.home > .container > h1 {
+    font-weight: 300;
+    letter-spacing: 20px;
+    font-size: 80px;
     text-align: center;
     color: #ffffff;
     float: left;
@@ -185,13 +234,284 @@
 }
 
 /*----------- AREA ------------*/
+.content-block {
+
+}
+
+.content-block h2, .property-caption h2 {
+    font-size: 30px;
+    line-height: 1.33;
+    text-align: left;
+    color: #e75300;
+    float: left;
+    width: 100%;
+    margin: 100px 0px;
+    max-width: 250px;
+}
+
+.content-block h2 span {
+    color: #8c8c8c;
+    float: left;
+}
+
+.content-block .contentBody,  .property-caption .contentBody {
+    float: left;
+    width: 100%;
+    margin: 97px 0px 50px;
+}
+
+.content-block .contentBody p {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.63;
+    text-align: left;
+    color: #1f1f1f;
+}
+
+.content-block .images img {
+    float: left;
+    width: 100%;
+}
+
+/*-------------- PAGE -------------------*/
+
+.Contact article {
+    margin-top: 400px;
+    max-width: 900px;
+    margin: 300px auto 100px;
+}
+
+article a {
+    color: #e75300;
+    text-decoration: underline
+}
+
+article a:hover {
+    color: #1f1f1f;
+    text-decoration: none
+}
+
+article h3 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.63;
+    text-align: left;
+    color: #1f1f1f;
+}
+
+article form {
+    float: left;
+    width: 100%;
+    margin: 50px 0px 150px;
+}
+
+article form .field.text {
+    float: left;
+    width: 50%;
+    padding: 10px 0px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 0px;
+}
+
+article form .field.textarea {
+    float: left;
+    width: 100%;
+    padding: 20px 0px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 0px;
+}
+
+article form .field.text input {
+    float: left;
+    width: 100%;
+    border: solid 1px #8c8c8c;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.06;
+    text-align: left;
+    color: #1f1f1f;
+    padding: 15px;
+}
+
+article form .field.textarea textarea {
+    float: left;
+    width: 100%;
+    border: solid 1px #8c8c8c;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.06;
+    text-align: left;
+    color: #1f1f1f;
+    padding: 15px;
+    min-height: 200px;
+}
+
+article form .action {
+    width: 162px;
+    height: 48px;
+    background-color: #1f1f1f;
+    border: solid 1px #1f1f1f;
+    float: right;
+    margin-right: 15px;
+    color: #FFF;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.06;
+    text-align: center;
+    color: #ffffff;
+}
+
+article form .action:hover {
+
+    background-color: #e75300;
+
+}
+
+.Contact .images img {
+    max-width: 100% !important;
+    margin-bottom: 100px;
+}
+
+article ul li {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.95;
+    text-align: left;
+    color: #1f1f1f;
+}
+
+article .property-details-table {
+    float: left;
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #1f1f1f;
+}
+
+article .property-details-table strong {
+    font-size: 60px;
+    line-height: 0.67;
+    text-align: left;
+    color: #1f1f1f;
+    font-weight: 500
+}
+
+article .property-details-table tr td:nth-child(2) {
+    border-left: 1px solid #1f1f1f;
+    padding-left: 100px;
+}
+
+.property-caption {
+    width: 100%;
+
+}
+
+.top {
+    margin-top: -182px;
+    width: 100%;
+    height: 200px;
+    background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 51%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 57%, rgba(0,0,0,1) 73%);
+    background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0) 51%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 57%,rgba(0,0,0,1) 73%);
+    background: linear-gradient(177deg, rgba(0,0,0,0) 51%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 57%,rgba(0,0,0,1) 73%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+}
+
+.bottom {
+    background-color:#000;
+    padding: 50px 0px 100px;
+}
+
+.property-plan img{
+    max-width: 100%;
+    margin-top: -200px;
+    position: relative;
+    z-index: -1;
+}
+.price-info p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.92;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #8c8c8c;
+    float: left;
+    width: 100%;
+}
+
+.price-button{
+    float:left;
+    background-color: #ffffff;
+    border: solid 1px #8c8c8c;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.06;
+    text-align: center;
+    color: #1f1f1f;
+    margin-top: 30px;
+    padding: 10px 40px;
+    text-decoration:none;
+}
+
+.price-button:hover {
+    background: #e75300;
+    color: #FFF;
+    text-decoration:none;
+    border: 1px solid #e75300;
+}
+
+.property-caption .caption-wrap {
+    border: solid 2px #e75300;
+    padding: 50px 50px;
+    float: left;
+    width: 100%;
+}
+
+.property-caption h2 {
+
+    margin: 0px;
+}
+
+.property-caption .contentBody {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.property-caption .contentBody p {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.33;
+    text-align: left;
+    color: #ffffff;
+}
+
+.property-caption .contentBody p strong{
+    color: #8c8c8c;
+    font-weight: normal
+}
+
+/*--------------- FOOTER -------------------*/
 
 footer {
-    height: 561px;
     background-color: #a3a3a3;
-    padding: 5rem 0;
+    padding: 8rem 0;
     color: #1f1f1f;
     font-size: 31px;
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    float: left;
+    width: 100%;
 }
 
 footer a {
@@ -200,6 +520,55 @@ footer a {
     color: #1f1f1f;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
     color: #e75300;
+    text-decoration: none
+}
+
+footer img.footer-logo {
+    max-width: 220px;
+}
+
+footer .toTop {
+    float: right;
+    margin-top: 20px
+}
+
+footer .copyright {
+    font-size: 13px;
+    text-align: left;
+    color: #545454;
+}
+
+footer .legal a {
+    font-size: 13px;
+    float: right;
+    color: #545454;
+    margin-left: 50px;
+}
+
+footer .legal a:hover {
+    color: #e75300;
+}
+
+footer .address {
+    font-size: 31px;
+    font-weight: 500;
+    text-align: left;
+    color: #1f1f1f;
+    float: left;
+    margin: 50px 0px;
+    line-height: 45px;
+}
+
+footer .contact {
+    float: right;
+    margin-top: 80px;
+}
+
+footer .contact h3 {
+    font-size: 31px;
+    font-weight: 500;
+    text-align: right;
+    color: #1f1f1f;
 }
