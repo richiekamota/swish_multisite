@@ -14,10 +14,6 @@ $('.bannerScroll a').click(function(){
     return false;
 });
 
-$('a.price-button').click(function(){
-    scrollTop: $( "#bannerBottom" ).offset().top
-    $("#property-summary").hide();
-    $("#property-details").fadeIn();
-
-    return false;
-});
+$(document).ready(function() {
+    $('#roomDataTable').DataTable();
+} );

@@ -10,7 +10,7 @@
                 </p>
             </div>
             <div class="col-lg-6">
-                <p><a href="#top" class="toTop">To Top &darr;</a></p>
+                <p><a href="#top" class="toTop">To Top &uarr;</a></p>
                 <div class="contact">
                     <h3>Craig Getz<br/>
                         <u><a href="mailto:craig@swishproperties.co.za">craig@swishproperties.co.za</a></u>

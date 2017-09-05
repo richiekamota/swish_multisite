@@ -1,29 +1,6 @@
 /* CSS Document for user  */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
-@media (min-width: 768px) {
-
-    .container {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .container {
-        width: 970px;
-    }
-
-}
-
-@media (min-width: 1200px) {
-
-    .container {
-        width: 1440px;
-    }
-
-}
-
 p {
     font-size: 30px;
     font-weight: 300;
@@ -236,6 +213,12 @@ strong {
     letter-spacing: 0.5px;
     text-align: center;
     color: #ffffff;
+    text-decoration: none;
+}
+
+.bannerScroll a:hover {
+    color: #e75300 !important;
+    text-decoration: none;
 }
 
 .home-banner {
@@ -467,11 +450,11 @@ article .property-details-table tr td:nth-child(2) {
     background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 73%);
     background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 73%);
     background: linear-gradient(177deg, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 73%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f1f1f', endColorstr='#1f1f1f', GradientType=1);
 }
 
 .bottom {
-    background-color: #000;
+    background-color: #1f1f1f;
     padding: 50px 0px 100px;
 }
 
@@ -546,7 +529,7 @@ article .property-details-table tr td:nth-child(2) {
 }
 
 #property-details {
-padding: 150px 20px;
+    padding: 150px 20px;
 }
 
 #property-details .floorList {
@@ -556,12 +539,12 @@ padding: 150px 20px;
     padding: 0;
 }
 
-.floorList li{
+.floorList li {
     float: left;
     width: 12.5%;
 }
 
-.floorList li a{
+.floorList li a {
     font-size: 30px;
     line-height: 1.33;
     color: #8c8c8c;
@@ -569,8 +552,112 @@ padding: 150px 20px;
     font-weight: 500
 }
 
-.floorList li a:hover{
-    color: #000000;
+.floorImage {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.floorImage p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.92;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #8c8c8c;
+    margin-top: 50px;
+}
+
+.floorImage img {
+    max-width: 100%;
+}
+
+.floorList li a:hover, .floorList li a.selected {
+    color: #e75300;
+}
+
+.roomTable {
+    margin: 50px 0px 0px;
+    float: left;
+    width: 100%;
+}
+
+/*--------------- DATA TABLES -------------*/
+
+.dataTables_filter, .dataTables_length, .dataTable tfoot, .dataTables_paginate span a {
+    display: none !important
+}
+
+table.dataTable thead th {
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    color: #1f1f1f;
+    background: none !important;
+    padding: 23px 20px;
+}
+
+table.dataTable tbody td {
+    font-size: 16px;
+    text-align: center;
+    color: #1f1f1f;
+    background: none !important;
+    padding: 23px 20px;
+}
+
+table.dataTable thead tr {
+    background: #FFF;
+}
+
+table.dataTable thead tr.table.dataTable.stripe tbody tr.even, table.dataTable.display tbody tr.even, table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background: #FFF !important;
+}
+
+table.dataTable.display tbody tr.even td {
+    color: #1f1f1f;
+}
+
+table.dataTable.display tbody tr:hover, table.dataTable.display tbody tr:hover td {
+    background-color: rgba(140, 140, 140, 0.2) !important;
+    cursor: pointer;
+}
+
+table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td {
+    background-color: #e75300 !important;
+    color: #FFF;
+}
+
+.dataTables_paginate, .dataTables_info {
+    margin-top: 30px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.92;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #8c8c8c;
+    padding-top: 1.755em !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    float: left;
+    background-color: #ffffff;
+    border: solid 1px #8c8c8c !important;
+    margin-left: 30px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.06;
+    text-align: center;
+    color: #1f1f1f;
+    margin-top: 0px;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #1f1f1f !important;
+    color: #FFFFFF !important;
+    font-weight: 400;
+    cursor: pointer;
 }
 
 /*--------------- FOOTER -------------------*/
@@ -647,4 +734,229 @@ footer .contact h3 {
     font-weight: 500;
     text-align: right;
     color: #1f1f1f;
+}
+
+@media (max-width: 768px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .collapsing {
+        overflow: hidden !important;
+    }
+}
+
+@media (max-width: 425px) {
+
+    *{
+        font-size: 80%
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        right: 0px;
+        top: 10px;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .navbar-header {
+        float: left;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        height: 1px;
+        float: right;
+        width: 65%;
+    }
+
+    .navbar a, .navbar li a {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+
+    .content-block .contentBody, .property-caption .contentBody {
+        float: left;
+        width: 100%;
+        margin: 15px 0px 20px;
+    }
+
+    .content-block h2, .property-caption h2 {
+        margin: 80px 0px 20px;
+        width: 100%;
+        float: left;
+        max-width: 100%;
+    }
+
+    .content-block h2 span {
+        float: none;
+    }
+
+    footer .toTop {
+        float: right;
+        margin-top: 20px;
+
+        top: 0;
+        right: 10px;
+
+    }
+
+    footer .col-lg-6 {
+        width: 100%;
+        float: left;
+        text-align: left
+    }
+
+    footer .contact {
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    footer .contact h3 {
+        text-align: left;
+    }
+
+    footer .copyright {
+        font-size: 13px;
+        text-align: center;
+        color: #545454;
+        padding-bottom: 20px;
+        float: left;
+        width: 100%;
+    }
+
+    footer .legal a {
+        font-size: 13px;
+        float: left;
+        color: #545454;
+        margin-left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 750px;
+    }
+
+    .navbar-header {
+        float: left;
+        width: 50%;
+    }
+
+    .navbar-collapse {
+        height: 1px;
+        float: right;
+        width: 50%;
+    }
+
+    .navbar a, .navbar li a {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+    .content-block .contentBody, .property-caption .contentBody {
+        float: left;
+        width: 100%;
+        margin: 15px 0px 20px;
+    }
+
+    .content-block h2, .property-caption h2 {
+        margin: 80px 0px 20px;
+        width: 100%;
+        float: left;
+        max-width: 100%;
+    }
+
+    .content-block h2 span {
+        float: none;
+    }
+
+    footer .col-lg-6 {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container {
+        width: 970px;
+    }
+
+    .navbar-header {
+        float: left;
+        width: 35%;
+    }
+
+    .navbar-collapse {
+        height: 1px;
+        float: right;
+        width: 65%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1440px;
+    }
+
 }
