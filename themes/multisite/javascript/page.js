@@ -1,5 +1,6 @@
 // JavaScript Document
 
+
 $('.toTop').click(function(){
     $('html, body').animate({
         scrollTop: $( "#top" ).offset().top
@@ -13,7 +14,3 @@ $('.bannerScroll a').click(function(){
     }, 1000);
     return false;
 });
-
-$(document).ready(function() {
-    $('#roomDataTable').DataTable();
-} );

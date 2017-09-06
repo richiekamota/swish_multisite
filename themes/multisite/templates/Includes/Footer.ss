@@ -5,7 +5,7 @@
                 <p><a href="/"><img src="{$ThemeDir}/images/logo.svg" class="footer-logo"/></a></p>
                 <p class="address">
                     The Avalon<br/>
-                    <u><a href="/contact">123 Hope Street<br/>
+                    <u><a href="/contact">123 Hope Street,<br/>
                         Cape Town</a></u>
                 </p>
             </div>

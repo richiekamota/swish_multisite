@@ -38,6 +38,35 @@ strong {
     text-decoration: none;
 }
 
+.fade-overlay {
+    float: left;
+    width: 100%;
+    background: #1f1f1f;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 10000;
+}
+
+.fade-overlay .overlay{
+    float: none;
+    margin: 25% auto 0px;
+    width: 80%;
+    text-align: center;
+}
+
+.fade-overlay .overlay img{
+    max-width: 400px;
+}
+
+/*----------- OVERLAY ------------------*/
+
+
+/*------------ NAVIGATION ---------------*/
+
+
+
 .navbar {
     border-radius: 0;
     margin-bottom: 0;
@@ -168,6 +197,18 @@ strong {
     font-size: .9em;
 }
 
+/*------ BANNER --------------*/
+
+[data-slides] {
+    background-image: url(../images/banner1.jpg); /* Default image. */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    transition: background-image 3s linear;
+}
+
+/* Use additional CSS to control the `height` of `[data-slides]`, like so: */
+
 .banner {
     height: 100%;
     background: #666 url(../images/background.jpg);
@@ -283,7 +324,7 @@ strong {
 .content-block .contentBody, .property-caption .contentBody {
     float: left;
     width: 100%;
-    margin: 97px 0px 50px;
+    margin: 95px 0px 50px;
 }
 
 .content-block .contentBody p {
@@ -736,54 +777,123 @@ footer .contact h3 {
     color: #1f1f1f;
 }
 
-@media (max-width: 768px) {
-    .navbar-header {
-        float: none;
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1440px;
     }
 
-    .navbar-toggle {
-        display: block;
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        width: 970px;
+    }
+
+    .navbar-header {
+        float: left;
+        width: 35%;
     }
 
     .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        height: 1px;
+        float: right;
+        width: 65%;
     }
 
-    .navbar-collapse.collapse {
-        display: none !important;
+    .content-block .contentBody, .property-caption .contentBody {
+        float: left;
+        width: 100%;
+        margin: 15px 0px 20px;
     }
 
-    .navbar-nav {
-        float: none !important;
-        margin: 7.5px -15px;
+    .content-block h2, .property-caption h2 {
+        margin: 80px 0px 20px;
+        width: 100%;
+        float: left;
+        max-width: 100%;
     }
 
-    .navbar-nav > li {
+    footer .col-lg-6 {
+        width: 50%;
+        float: left;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 750px;
+    }
+
+    .navbar-header {
+        float: left;
+        width: 50%;
+    }
+
+    .navbar-collapse {
+        height: 1px;
+        float: right;
+        width: 50%;
+    }
+
+    .navbar a, .navbar li a {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+    .content-block .contentBody, .property-caption .contentBody {
+        float: left;
+        width: 100%;
+        margin: 15px 0px 20px;
+    }
+
+    .content-block h2, .property-caption h2 {
+        margin: 80px 0px 20px;
+        width: 100%;
+        float: left;
+        max-width: 100%;
+    }
+
+    .content-block h2 span {
         float: none;
     }
 
-    .navbar-nav > li > a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .navbar-text {
-        float: none;
-        margin: 15px 0;
-    }
-
-    /* since 3.1.0 */
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-
-    .collapsing {
-        overflow: hidden !important;
+    footer .col-lg-6 {
+        width: 50%;
+        float: left;
     }
 }
 
 @media (max-width: 425px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .Contact article {
+        margin-top: 400px;
+        max-width: 900px;
+        margin: 120px auto 100px;
+    }
 
     *{
         font-size: 80%
@@ -880,83 +990,54 @@ footer .contact h3 {
 
 }
 
-@media (min-width: 768px) {
 
-    .container {
-        width: 750px;
-    }
-
+@media (max-width: 768px) {
     .navbar-header {
-        float: left;
-        width: 50%;
-    }
-
-    .navbar-collapse {
-        height: 1px;
-        float: right;
-        width: 50%;
-    }
-
-    .navbar a, .navbar li a {
-        color: #FFFFFF;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 16px;
-        padding: 15px 15px;
-    }
-
-    .navbar-toggle {
-        position: absolute;
-        right: 20px;
-        top: 30px;
-    }
-
-    .content-block .contentBody, .property-caption .contentBody {
-        float: left;
-        width: 100%;
-        margin: 15px 0px 20px;
-    }
-
-    .content-block h2, .property-caption h2 {
-        margin: 80px 0px 20px;
-        width: 100%;
-        float: left;
-        max-width: 100%;
-    }
-
-    .content-block h2 span {
         float: none;
     }
 
-    footer .col-lg-6 {
-        width: 50%;
-        float: left;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .container {
-        width: 970px;
-    }
-
-    .navbar-header {
-        float: left;
-        width: 35%;
+    .navbar-toggle {
+        display: block;
     }
 
     .navbar-collapse {
-        height: 1px;
-        float: right;
-        width: 65%;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        display: none !important;
+        background: #1f1f1f;
+        padding: 20px !important;
+        max-width: 200px;
+        margin-top: 27px;
     }
 
-}
-
-@media (min-width: 1200px) {
-
-    .container {
-        width: 1440px;
+    .navbar-collapse.collapse {
+        display: none !important;
     }
 
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .collapsing {
+        overflow: hidden !important;
+    }
 }

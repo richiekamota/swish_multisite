@@ -25,13 +25,18 @@
 
 </head>
 <body class="$ClassName" id="Page{$ID}">
+<div class="fade-overlay">
+    <div class="overlay">
+        <img src="{$ThemeDir}/images/logo-white.svg" class="overlay-logo"/>
+    </div>
+</div>
 
 
     <% include NavigationArea %>
 
 
 
-<div class="home-banner">
+<div class="home-banner" data-slides='["{$ThemeDir}/images/site{$SubsiteID}/banner1.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner2.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner3.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner4.jpg"]'>
     <div class="container">
 
     </div>
@@ -43,18 +48,41 @@
     <div class="container">
 
 
-            <h1>$Title</h1>
+        <h1>$Title</h1>
 
 
     </div>
 
-
-    <% // include Footer %>
-
-
     <script type="text/javascript" src="{$ThemeDir}/javascript/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/page.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".fade-overlay").delay(2000).fadeOut(2000);
+
+            ! function ($) {
+                "use strict";
+                var slide = $("[data-slides]"),
+                        count = 0,
+                        slides = slide.data("slides"),
+                        len = slides.length,
+                        n = function () {
+                            if (count >= len) {
+                                count = 0
+                            }
+                            slide.css("background-image", 'url("' + slides[count] + '")').show(0, function () {
+                                setTimeout(n, 5e3)
+                            });
+                            count++;
+                        };
+                n()
+            }(jQuery);
+
+        });
+
+
+    </script>
 
 </div>
 

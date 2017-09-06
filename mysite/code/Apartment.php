@@ -11,11 +11,13 @@ class Apartment extends Page
         'Subheading' => 'Varchar(255)',
         'Body' => 'HTMLText',
         'CaptionHeading' => 'Varchar(255)',
-        'CaptionText' => 'HTMLText'
+        'CaptionText' => 'HTMLText',
+        'SubsiteID' => 'Int'
     );
 
     private static $has_one = array(
         'Image' => 'Image',
+        'Subsite' => 'Subsite'
     );
     public static $has_many = array(
         'Rooms' => 'Room',
@@ -42,6 +44,7 @@ class Apartment extends Page
             HtmlEditorField::create('Body', 'Body'),
             TextField::create('CaptionHeading', 'Caption Heading'),
             HtmlEditorField::create('CaptionText', 'Caption Text'),
+            HiddenField::create('SubsiteID','SubsiteID', Subsite::currentSubsiteID()),
             $uploader1 = UploadField::create('Image', 'Image'),
 
         ), "Metadata");

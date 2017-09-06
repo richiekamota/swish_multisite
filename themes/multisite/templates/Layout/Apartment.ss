@@ -35,7 +35,7 @@
                         THE LEVEL AND GET A DETAILED VIEW.</p>
                     <a href="/property/floors/1" class="price-button">View Pricing Info</a>
                 </div>
-                <img src="{$ThemeDir}/images/property.png" class="property-plan"/>
+                <img src="{$ThemeDir}/images/site{$SubsiteID}/property.png" class="property-plan"/>
             </div>
         </div>
         <div class="top">

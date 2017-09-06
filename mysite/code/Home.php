@@ -5,8 +5,14 @@ class HomePage extends Page
 
     private static $db = array(
 
-        'BannerContent' => 'HTMLText'
+        'BannerContent' => 'HTMLText',
+        'SubsiteID' => 'Int'
 
+    );
+
+    // One-to-one relationship with profile picture and contact list page
+    public static $has_one = array(
+        'Subsite' => 'Subsite'
     );
 
     public function getCMSFields() {
@@ -14,7 +20,8 @@ class HomePage extends Page
         $fields = parent::getCMSFields();
 
         $fields->addFieldsToTab("Root.Main", array(
-            TextField::create("BannerContent", "Hero Content")
+            TextField::create("BannerContent", "Hero Content"),
+            HiddenField::create('SubsiteID','SubsiteID', Subsite::currentSubsiteID()),
         ), "Content");
 
         return $fields;

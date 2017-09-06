@@ -40,9 +40,9 @@
 	<% end_loop %>
 	
 	
-	<% if $CurrentMember %>
-		<li>
-			<a href="Security/logout" title="$Title.XML">Log Out</a>
-		</li>	 
-	<% end_if %>
+	<%--<% if $CurrentMember %>--%>
+		<%--<li>--%>
+			<%--<a href="Security/logout" title="$Title.XML">Log Out</a>--%>
+		<%--</li>	 --%>
+	<%--<% end_if %>--%>
 </ul>
