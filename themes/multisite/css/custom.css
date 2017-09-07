@@ -578,11 +578,16 @@ article .property-details-table tr td:nth-child(2) {
     width: 100%;
     list-style: none;
     padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .floorList li {
-    float: left;
-    width: 12.5%;
+    width: auto;
+    display:flex
 }
 
 .floorList li a {
@@ -611,6 +616,7 @@ article .property-details-table tr td:nth-child(2) {
 
 .floorImage img {
     max-width: 100%;
+    margin-top: 30px;
 }
 
 .floorList li a:hover, .floorList li a.selected {
