@@ -52,7 +52,7 @@
                                 <tr <% if AvailabilityStatus == 'Not Available' %>class="sold"<% end_if %>>
                                     <td>$FloorNumber</td>
                                     <td>$UnitNumber</td>
-                                    <td>R $Price</td>
+                                    <td>$Price</td>
                                     <td>$Bedrooms</td>
                                     <td>$InteriorSize</td>
                                     <td>$ExteriorSize</td>

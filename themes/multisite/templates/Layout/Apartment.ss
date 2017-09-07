@@ -1,7 +1,8 @@
 <div class="banner" <% if $Image.URL %>style="background-image: url($Image.URL)" <% end_if %>>
     <div class="container">
         <h1>$Title</h1>
-        <div class="bannerScroll"><a href="#bannerBottom">SCROLL<br/><i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
+        <div class="bannerScroll"><a href="#bannerBottom">SCROLL<br/><i class="fa fa-chevron-down"
+                                                                        aria-hidden="true"></i></a></div>
     </div>
 
 </div>
@@ -33,7 +34,8 @@
                     <p>&copy;<br/>
                         HOVER OVER THE INDIVIDUAL FLOORS TO HIGHLIGHT<br/>
                         THE LEVEL AND GET A DETAILED VIEW.</p>
-                    <a href="/property/floors/1" class="price-button">View Pricing Info</a>
+                    <a href="javascript:;" onclick="javascript: priceSignUp($FirstFloor);" class="price-button">View Pricing
+                        Info</a>
                 </div>
                 <img src="{$ThemeDir}/images/site{$SubsiteID}/property.png" class="property-plan"/>
             </div>

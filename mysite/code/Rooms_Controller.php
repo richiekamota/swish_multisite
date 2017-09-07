@@ -3,12 +3,11 @@
 class Rooms_Controller extends Page_Controller
 {
     private static $allowed_actions = array(
-        'index'
+        'index',
     );
 
     public function index(SS_HTTPRequest $request)
     {
-
         $subsiteID = Subsite::currentSubsiteID();
 
         $floors = Floor::get()->filter(array(
@@ -41,6 +40,7 @@ class Rooms_Controller extends Page_Controller
         )))->renderWith('RoomList');
 
     }
+
 
 }
 

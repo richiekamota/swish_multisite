@@ -777,11 +777,24 @@ footer .contact h3 {
     color: #1f1f1f;
 }
 
+/*------- SWEET ALERT -------------*/
+
+.swal-button{
+    background: #FFF !important;
+    color: #1f1f1f !important;
+    font-weight: 500 !important;
+    bordeR: 1px solid #1f1f1f !important;
+}
+
+.swal-button:hover{
+    background: #e75300 !important;
+    color: #FFF !important;
+    font-weight: 500 !important;
+    bordeR: 1px solid #e75300 !important;
+}
 
 
-
-
-
+/*-------- RESPONSIVE BREAKPOINTS -------------*/
 
 
 @media (min-width: 1200px) {
