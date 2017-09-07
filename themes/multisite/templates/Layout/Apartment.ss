@@ -32,8 +32,8 @@
             <div class="property-plan">
                 <div class="price-info">
                     <p>&copy;<br/>
-                        HOVER OVER THE INDIVIDUAL FLOORS TO HIGHLIGHT<br/>
-                        THE LEVEL AND GET A DETAILED VIEW.</p>
+                        CLICK HERE TO VIEW DETAILED FLOOR PLANS<br/>
+                        AND PRICING INFO.</p>
                     <a href="javascript:;" onclick="javascript: priceSignUp($FirstFloor);" class="price-button">View Pricing
                         Info</a>
                 </div>
