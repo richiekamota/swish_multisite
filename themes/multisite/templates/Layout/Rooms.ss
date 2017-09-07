@@ -1,7 +1,7 @@
 <div id="property-details">
     <div class="container">
         <article>
-            <div class="breadcrumb"><a href="/property">Back to Site Plan</a></div>
+            <div class="breadcrumb"><a href="/property"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Site Plan</a></div>
             <% if $Floors %>
                 <ul class="floorList">
                     <% loop $Floors %>
