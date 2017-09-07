@@ -3,9 +3,12 @@
 <!--[if !IE]><!-->
 <html lang="$ContentLocale">
 <!--<![endif]-->
-<!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
-<!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
-<!--[if IE 8 ]><html lang="$ContentLocale" class="ie ie8"><![endif]-->
+<!--[if IE 6 ]>
+<html lang="$ContentLocale" class="ie ie6"><![endif]-->
+<!--[if IE 7 ]>
+<html lang="$ContentLocale" class="ie ie7"><![endif]-->
+<!--[if IE 8 ]>
+<html lang="$ContentLocale" class="ie ie8"><![endif]-->
 <head>
     <% base_tag %>
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
@@ -19,8 +22,6 @@
     <% require themedCSS('font-awesome.min') %>
     <% require themedCSS('custom') %>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-
-
 
 
 </head>
@@ -54,9 +55,24 @@
     <script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $('#roomDataTable').DataTable();
-        } );
+        $(document).ready(function () {
+            var datatable = $('#roomDataTable').DataTable({
+                "columnDefs": [
+                    {
+                        "targets": [ 0 ],
+                        "visible": false,
+                        "searchable": false
+                    }
+                ]
+            });
+
+            $('#roomDataTable').on('click', 'tr', function (event) {
+                var data = datatable.row( this ).data()
+                console.log(data);
+            });
+
+
+        });
     </script>
 
 </div>

@@ -1,7 +1,7 @@
 <div id="property-details">
     <div class="container">
         <article>
-            <div class="breadcrumb"><a href="/property"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Site Plan</a></div>
+            <div class="breadcrumb"><a href="/property"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp; Back to Site Plan</a></div>
             <% if $Floors %>
                 <ul class="floorList">
                     <% loop $Floors %>
@@ -19,13 +19,14 @@
                             $MainImage
                         <% end_loop %>
                     <% end_if %>
-                    <p>&copy; TO VIEW FLOOR PLANS, CLICK AVAILABLE UNIT NUMBERS</p>
+                    <%--<p>&copy; CLICK AVAILABLE UNIT NUMBERS FOR ADDITIONAL INFORMATION</p>--%>
                 </div>
                 <div class="roomTable">
 
                     <table id="roomDataTable" class="display" cellspacing="0" width="100%">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Floor</th>
                             <th>Unit No.</th>
                             <th>* Price Inc. VAT</th>
@@ -37,6 +38,7 @@
                         </thead>
                         <tfoot>
                         <tr>
+                            <th>ID</th>
                             <th>Floor</th>
                             <th>Unit No.</th>
                             <th>* Price Inc. VAT</th>
@@ -50,6 +52,7 @@
                             <% if Rooms %>
                                 <% loop Rooms %>
                                 <tr <% if AvailabilityStatus == 'Not Available' %>class="sold"<% end_if %>>
+                                    <td>$ID</td>
                                     <td>$FloorNumber</td>
                                     <td>$UnitNumber</td>
                                     <td>$Price</td>
