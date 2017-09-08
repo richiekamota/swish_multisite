@@ -917,6 +917,11 @@ footer .contact h3 {
 
 @media screen and (max-width: 768px) {
 
+    .banner .container > h1, .main-area.home > .container > h1 {
+        font-size: 50px;
+        letter-spacing: 20px;
+    }
+
     .navbar {
         height: 100px;
     }
