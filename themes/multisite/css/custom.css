@@ -1089,7 +1089,16 @@ footer .contact h3 {
         max-width: 312px;
     }
 
+    .navbar-nav > li a {
+        padding: 13px 8px 50px 8px;
+    }
+
+    .banner .container > h1, .main-area.home > .container > h1 {
+        font-size: 50px;
+        letter-spacing: 20px;
+    }
 }
+
 
 @media screen and (max-width: 425px) {
 
@@ -1182,6 +1191,12 @@ footer .contact h3 {
         padding: 15px 15px;
     }
 
+    .navbar-nav li a{
+        padding: 25px 0px;
+        font-size: 25px;
+        font-weight: 400
+    }
+
     .content-block .contentBody, .property-caption .contentBody {
         float: left;
         width: 100%;
@@ -1240,6 +1255,11 @@ footer .contact h3 {
         margin-left: 0px;
         width: 100%;
         text-align: center;
+    }
+
+    .banner .container > h1, .main-area.home > .container > h1 {
+        font-size: 28px;
+        letter-spacing: 18px;
     }
 
 }
