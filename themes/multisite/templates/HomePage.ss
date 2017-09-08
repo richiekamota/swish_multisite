@@ -85,6 +85,11 @@
     </script>
 
 </div>
-
+<div class="preload">
+    <img src="{$ThemeDir}/images/site{$SubsiteID}/banner1.jpg"/>
+    <img src="{$ThemeDir}/images/site{$SubsiteID}/banner2.jpg"/>
+    <img src="{$ThemeDir}/images/site{$SubsiteID}/banner3.jpg"/>
+    <img src="{$ThemeDir}/images/site{$SubsiteID}/banner4.jpg"/>
+</div>
 </body>
 </html>
