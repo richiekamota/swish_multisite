@@ -42,7 +42,7 @@ function priceSignUp(floorNumber) {
     }).catch(err => {
 
         if (err) {
-            swal("Oh no!", "The submission failed! Please reload the page and try again.", "error");
+            swal("Oh no!", "The submission failed! Please try again.", "error");
         } else {
             swal.stopLoading();
             swal.close();
