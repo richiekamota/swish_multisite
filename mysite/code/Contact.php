@@ -55,4 +55,25 @@ class Contact_Controller extends Page_Controller {
         );
         return new Form($this, 'Form', $fields, $actions);
     }
+
+    public function submit($data, $form) {
+        $email = new Email();
+
+        $email->setTo('siteowner@mysite.com');
+        $email->setFrom($data['Email']);
+        $email->setSubject("Contact Message from {$data["FirstName"]} {$data["LastName"]}");
+
+        $messageBody = " 
+            <p><strong>Name:</strong> {$data["FirstName"]} {$data["LastName"]}</p> 
+            <p><strong>Email:</strong> {$data["Email"]}</p> 
+            <p><strong>Phone:</strong>{$data["TelephoneNumber"]}</p> 
+            <p><strong>Message:</strong> {$data['Message']}</p> 
+        ";
+        $email->setBody($messageBody);
+        $email->send();
+        return array(
+            'Content' => '<p>Thank you for your feedback.</p>',
+            'Form' => ''
+        );
+    }
 }

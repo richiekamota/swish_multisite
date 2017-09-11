@@ -4,6 +4,13 @@
         <div class="content">$Content</div>
 
         $Form
+
+        <h3>Swish Head Office:</h3>
+        <p>8th floor<br/>
+            80 Strand Street<br/>
+            Cape Town<br/>
+            8005
+        </p>
     </article>
 
     <% if Image1 && Image2 %>

@@ -385,7 +385,7 @@ article h3 {
 article form {
     float: left;
     width: 100%;
-    margin: 50px 0px 150px;
+    margin: 50px 0px 0px;
 }
 
 article form .field.text {
@@ -849,6 +849,12 @@ footer .contact h3 {
         width: 100%;
         float: left;
         max-width: 100%;
+    }
+
+
+    .navbar a, .navbar li a {
+
+        padding: 15px 25px;
     }
 
     footer .col-lg-6 {

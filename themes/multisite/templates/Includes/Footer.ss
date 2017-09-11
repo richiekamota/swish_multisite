@@ -13,6 +13,7 @@
                 <p><a href="#top" class="toTop">To Top &uarr;</a></p>
                 <div class="contact">
                     <h3>Craig Getz<br/>
+                        +27 (0)83 518 2129<br/>
                         <u><a href="mailto:craig@swishproperties.co.za">craig@swishproperties.co.za</a></u>
                     </h3>
                 </div>
