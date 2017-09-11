@@ -59,7 +59,7 @@ class Contact_Controller extends Page_Controller {
     public function submit($data, $form) {
         $email = new Email();
 
-        $email->setTo('siteowner@mysite.com');
+        $email->setTo('craig@swishproperties.co.za');
         $email->setFrom($data['Email']);
         $email->setSubject("Contact Message from {$data["FirstName"]} {$data["LastName"]}");
 

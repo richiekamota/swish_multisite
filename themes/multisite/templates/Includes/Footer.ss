@@ -4,9 +4,22 @@
             <div class="col-lg-6">
                 <p><a href="/"><img src="{$ThemeDir}/images/logo.svg" class="footer-logo"/></a></p>
                 <p class="address">
-                    The Avalon<br/>
-                    <u><a href="/contact">123 Hope Street,<br/>
-                        Cape Town</a></u>
+                    <% if $SiteConfig.Title == 'Akapelo' %>
+                        Akapelo<br/>
+                        <u><a href="/contact">15 Pepper Street,<br/>
+                            Cape Town</a></u>
+                    <% end_if %>
+                    <% if $SiteConfig.Title == 'The Avalon' %>
+                        The Avalon<br/>
+                        <u><a href="/contact">123 Hope Street,<br/>
+                            Cape Town</a></u>
+                    <% end_if %>
+                    <% if $SiteConfig.Title == 'The Petals' %>
+                        The Petals<br/>
+                        <u><a href="/contact">183 Sir Lowry Road,<br/>
+                            Cape Town</a></u>
+                    <% end_if %>
+
                 </p>
             </div>
             <div class="col-lg-6">
