@@ -40,23 +40,23 @@
                 <img src="{$ThemeDir}/images/site{$SubsiteID}/property.png" class="property-plan"/>
             </div>
         </div>
-        <div class="top">
-        </div>
-        <div class="bottom">
-            <div class="container">
+        <%--<div class="top">--%>
+        <%--</div>--%>
+        <%--<div class="bottom">--%>
+            <%--<div class="container">--%>
 
-                <div class="row">
+                <%--<div class="row">--%>
 
-                    <div class="caption-wrap">
-                        <div class="col-lg-4">
-                            <h2>$CaptionHeading</h2>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="contentBody">$CaptionText</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <%--<div class="caption-wrap">--%>
+                        <%--<div class="col-lg-4">--%>
+                            <%--<h2>$CaptionHeading</h2>--%>
+                        <%--</div>--%>
+                        <%--<div class="col-lg-8">--%>
+                            <%--<div class="contentBody">$CaptionText</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
     </div>
 </div>
