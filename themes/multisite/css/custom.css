@@ -724,6 +724,39 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
     height: 100vh;
 }
 
+.map p {
+    font-size: 15px;
+}
+
+.map-container {
+    /* Just so the map looks more centered onload */
+    margin-top: 80px;
+    position: relative;
+}
+
+.map__category {
+    background-color: #a3a3a3;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 270px;
+}
+
+.map__category-option {
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.map__category .map__category-option:not(:first-of-type) {
+    padding-top: 7px;
+}
+
+.map__marker-info {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+}
+
 
 /*--------------- FOOTER -------------------*/
 
@@ -1177,6 +1210,11 @@ footer .contact h3 {
 
     * {
         font-size: 80%
+    }
+
+    /* No font hacks on the map page please. */
+    .map-container * {
+        font-size: 100%;
     }
 
     .navbar-toggle {

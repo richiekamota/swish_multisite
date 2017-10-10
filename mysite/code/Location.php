@@ -8,7 +8,7 @@ class Location extends DataObject
         'Lat' => 'Varchar(255)',
         'Long' => 'Varchar(255)',
         'Description' => 'HTMLText',
-        'Category' => 'Enum("Available,Not Available")',
+        'Category' => 'Enum("Residential, Commericial, Industrial, Retail, Student Accommodation")',
         'SortID' => 'Int',
     );
 
