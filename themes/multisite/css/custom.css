@@ -719,6 +719,12 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
     cursor: pointer;
 }
 
+/*---------------- Map -------------------*/
+.map {
+    height: 100vh;
+}
+
+
 /*--------------- FOOTER -------------------*/
 
 footer {

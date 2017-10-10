@@ -54,6 +54,8 @@
     <script type="text/javascript" src="{$ThemeDir}/javascript/page.js"></script>
 
 </div>
-
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZV6K0liKsEk6o8hk3oBDZn4LAZlj9rE&callback=initMap">
+</script>
 </body>
 </html>

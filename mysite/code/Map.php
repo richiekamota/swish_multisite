@@ -9,7 +9,6 @@ class Map extends Page
     );
 
     private static $has_one = array(
-        'Image' => 'Image',
         'Subsite' => 'Subsite'
     );
     public static $has_many = array(
@@ -32,11 +31,8 @@ class Map extends Page
 
             TextField::create('Heading', 'Heading'),
             HiddenField::create('SubsiteID', 'SubsiteID', Subsite::currentSubsiteID()),
-            $uploader1 = UploadField::create('Image', 'Image'),
 
         ), "Metadata");
-
-        $uploader1->getValidator()->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
 
         $gridFieldConfig = GridFieldConfig::create()->addComponents(
             new GridFieldToolbarHeader(),
@@ -54,5 +50,23 @@ class Map extends Page
         $fields->addFieldToTab("Root.Locations", $gridField);
 
         return $fields;
+    }
+
+    // Get all the locations associated to the map, filter out the categories and return the unique 1s
+    public function uniqueLocationCategories() {
+        // Load up the location data
+        $mapLocations = new ArrayList();
+        $mapLocations->merge(Location::get()->filter(array(
+            'MapID' => $this->ID
+        )));
+
+        $uniqueCategories = [];
+        // Loop through the data and put it in a new array;
+        foreach ($mapLocations as $mapLocation) {
+            if (!in_array($mapLocation->Category, $uniqueCategories)) {
+                $uniqueCategories[] = $mapLocation->Category;
+            }
+        }
+        return $uniqueCategories;
     }
 }
