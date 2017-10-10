@@ -1217,6 +1217,10 @@ footer .contact h3 {
         font-size: 100%;
     }
 
+    .map__category {
+        position: static;
+    }
+
     .navbar-toggle {
         position: absolute;
         right: 0px;
