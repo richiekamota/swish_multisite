@@ -64,9 +64,10 @@ class Map extends Page
         // Loop through the data and put it in a new array;
         foreach ($mapLocations as $mapLocation) {
             if (!in_array($mapLocation->Category, $uniqueCategories)) {
-                $uniqueCategories[] = $mapLocation->Category;
+                $uniqueCategories[] = array ('category' => $mapLocation->Category);
             }
         }
+        $uniqueCategories = new ArrayList($uniqueCategories);
         return $uniqueCategories;
     }
 }

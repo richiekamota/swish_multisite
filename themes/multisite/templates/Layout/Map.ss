@@ -19,9 +19,9 @@
     </script>
 <% end_loop %>
 
-<%--<% loop $uniqueLocationCategories %>--%>
-    <%--$Debug--%>
-<%--<% end_loop %>--%>
+<% loop $uniqueLocationCategories %>
+    $category
+<% end_loop %>
 
 
 <script type="text/javascript" src="{$ThemeDir}/javascript/maps.js"></script>
