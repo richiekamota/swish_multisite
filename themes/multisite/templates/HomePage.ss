@@ -49,18 +49,23 @@
         <h1>$Title</h1>
 
          <article> 
-                     <% if Social_Media %>
-                     <% loop Social_Media %>             
-             <div class="row">
-               <div class="col-lg-4">
-                 <div class="social-block">                           
-                    <h4>$Title</h4>                                
-                    <p>$SocialMediaIcon</p>                                                            
-                   </div>                    
-                  </div> 
-                </div> 
-                <% end_loop %>
-               <% end_if %>     
+              <article>  
+                     <% if Social_Media %> 
+                     <% loop Social_Media %>              
+             <div class="row"> 
+               <div class="col-lg-4 col-md-12"> 
+                 <div class="social-block"> 
+                   <div class="icon-container">                           
+                    <h4>$Title</h4>                                 
+                    <p>$SocialMediaIcon</p>  
+                 </div>                                                           
+                   </div>                     
+                  </div>  
+                </div>  
+                <% end_loop %> 
+               <% end_if %>      
+        </article>      
+
         </article>     
         
          <%-- <article style="float:left">
