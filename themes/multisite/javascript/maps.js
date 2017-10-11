@@ -4,7 +4,7 @@ function initMap() {
 
     // NOTE: We get the map locations from the pages script tags, spat out by SilverStripe
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
+        zoom: 10,
         center: { lat: parseFloat(mapLocations[0].lat), lng: parseFloat(mapLocations[0].long) },
         styles: [
             {
@@ -217,10 +217,12 @@ function initMap() {
     // Add click event and info window to the marker
     mapMarkers.forEach(function (marker) {
         marker.addListener('click', function() {
-            var html = '<div class="map__marker-info" style="background-image: url('+ this.image  +'); "></div>' +
-                this.title +
-                "<br/>" + this.category +
-                "<br/>" + this.description;
+            var html = '<div class="map__marker-info">' +
+                '<div class="map__marker-info-image" style="background-image: url('+ this.image  +'); "></div>' +
+                "<span class='map__marker-info-title'>" + this.title + "</span>" +
+                "<span class='map__marker-info-category'>" +  this.category + "</span>" +
+                "<span class='map__marker-info-desc'>" + this.description + "</span>" +
+                '</div>';
             infoWindow.setContent(html);
             infoWindow.open(map, this);
         });

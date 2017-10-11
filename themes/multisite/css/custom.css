@@ -352,15 +352,27 @@ strong {
     width: 100%;
 }
 
-/*-------------- PAGE -------------------*/
-
-article.padded {
-    margin: 300px auto 100px;
-}
+/*-------------- Contact PAGE -------------------*/
 
 .Contact article {
     margin-top: 400px;
     max-width: 900px;
+    margin: 300px auto 100px;
+}
+
+.Contact .images img {
+    max-width: 100% !important;
+    margin-bottom: 100px;
+}
+
+.Contact #map{
+    height: 200px;
+    width: 100%;
+}
+
+/*-------------- PAGE -------------------*/
+
+article.padded {
     margin: 300px auto 100px;
 }
 
@@ -453,11 +465,6 @@ article form .action:hover {
 
     background-color: #e75300;
 
-}
-
-.Contact .images img {
-    max-width: 100% !important;
-    margin-bottom: 100px;
 }
 
 article ul li {
@@ -734,28 +741,67 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
     position: relative;
 }
 
-.map__category {
+.map__categories {
     background-color: #a3a3a3;
-    padding: 10px;
     position: absolute;
     right: 10px;
-    top: 270px;
+    top: 70px;
+}
+
+.map__categories ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.map__category {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0;
+    min-height: 140px;
+    padding: 16px;
+    text-align: right;
+    width: 20vw;
 }
 
 .map__category-option {
-    border-bottom: 1px solid #1f1f1f;
+}
+.map__category input{
+    opacity: 0;
 }
 
 .map__category .map__category-option:not(:first-of-type) {
     padding-top: 7px;
 }
 
-.map__marker-info {
+.map__marker-info{
+    width: 250px;
+}
+
+.map__marker-info-image {
     background-size: cover;
     background-position: center;
     height: 150px;
-    width: 100%;
+    margin-bottom: 5px;
+    width: 230px;
 }
+
+.map__marker-info-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.map__marker-info-category {
+    color: #e75300;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.map__marker-info-desc {}
 
 
 /*--------------- FOOTER -------------------*/
@@ -1146,6 +1192,10 @@ footer .contact h3 {
     .banner .container > h1, .main-area.home > .container > h1 {
         font-size: 50px;
         letter-spacing: 20px;
+    }
+
+    .map-container {
+        margin-top: 130px;
     }
 }
 

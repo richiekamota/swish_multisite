@@ -8,7 +8,6 @@ class Location extends DataObject
         'Lat' => 'Varchar(255)',
         'Long' => 'Varchar(255)',
         'Description' => 'HTMLText',
-        'Category' => 'Enum("Residential, Commericial, Industrial, Retail, Student Accommodation")',
         'SortID' => 'Int',
     );
 
@@ -16,6 +15,7 @@ class Location extends DataObject
     public static $has_one = array(
         'Thumbnail' => 'Image',
         'MainImage' => 'Image',
+        'Category' => 'Category',
         'Map' => 'Map',
     );
 
@@ -23,8 +23,7 @@ class Location extends DataObject
     public static $summary_fields = array(
         'Name' => 'Name',
         'Lat' => 'Lat',
-        'Long' => 'Long',
-        'Category' => 'Category'
+        'Long' => 'Long'
     );
 
     public function getCMSFields()
@@ -43,7 +42,7 @@ class Location extends DataObject
             new TextField('Name', 'Name'),
             new TextField('Lat', 'Lat'),
             new TextField('Long', 'Long'),
-            new DropdownField('Category', 'Category', singleton('Location')->dbObject('Category')->enumValues()),
+            new DropdownField('CategoryID', 'Category', Category::get()->map('ID', 'Name')),
             $thumbField,
             $imageField,
             new HTMLEditorField('Description', 'Description')

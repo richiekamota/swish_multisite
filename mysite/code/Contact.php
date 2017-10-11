@@ -3,7 +3,10 @@
 class Contact extends Page
 {
 
-    private static $db = array();
+    private static $db = array(
+        'GPSLat' => 'Varchar(255)',
+        'GPSLng' => 'Varchar(255)'
+    );
 
     private static $has_one = array(
         'Image1' => 'Image',
@@ -17,6 +20,9 @@ class Contact extends Page
         $fields = parent::getCMSFields();
 
         $fields->addFieldsToTab("Root.Main", array(
+
+            TextField::create('GPSLat'),
+            TextField::create('GPSLng'),
 
             $uploader1 = UploadField::create('Image1', 'Image 1'),
             $uploader2 = UploadField::create('Image2', 'Image 2'),

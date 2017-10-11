@@ -1,13 +1,19 @@
 <div class="map-container">
     <div id="map" class="map">
     </div>
-    <div class="map__category">
-        <% loop $uniqueLocationCategories %>
-            <div class="map__category-option">
-                <input type="checkbox" name="mapCategories" value="$category" id="category_$category" onchange="changeMarkersCategory('mapCategories')" checked>
-                <label for="category_$category">$category</label>
-            </div>
-        <% end_loop %>
+    <div class="map__categories">
+        <% if $uniqueLocationCategories %>
+        <ul>
+            <% loop $uniqueLocationCategories %>
+            <li>
+                <label for="category_$name" class="map__category"  style="background-image: url($image.URL)">
+                    $name
+                    <input type="checkbox" name="mapCategories" value="$name" id="category_$name" onchange="changeMarkersCategory('mapCategories')" checked>
+                </label>
+            </li>
+            <% end_loop %>
+        </ul>
+        <% end_if %>
     </div>
 </div>
 
@@ -22,7 +28,7 @@
           lat: "$Lat",
           long: "$Long",
           description: "$Description",
-          category: "$Category",
+          category: "$Category.Name",
           image: "$MainImage.URL",
         });
     </script>

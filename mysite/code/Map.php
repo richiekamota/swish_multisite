@@ -12,7 +12,8 @@ class Map extends Page
         'Subsite' => 'Subsite'
     );
     public static $has_many = array(
-        'Locations' => 'Location'
+        'Locations' => 'Location',
+        'Categories' => 'Category'
     );
 
     public static $allowed_actions = array(
@@ -25,7 +26,6 @@ class Map extends Page
         $fields = parent::getCMSFields();
 
         $fields->removeFieldFromTab("Root.Main", "Content");
-
 
         $fields->addFieldsToTab("Root.Main", array(
 
@@ -45,9 +45,24 @@ class Map extends Page
             new GridFieldDetailForm(),
             new GridFieldSortableRows('SortID')
         );
+        $categoryFieldConfig = GridFieldConfig::create()->addComponents(
+            new GridFieldToolbarHeader(),
+            new GridFieldAddNewButton('toolbar-header-right'),
+            new GridFieldSortableHeader(),
+            new GridFieldDataColumns(),
+            new GridFieldPaginator(20),
+            new GridFieldEditButton(),
+            new GridFieldDeleteAction(),
+            new GridFieldDetailForm(),
+            new GridFieldSortableRows('SortID')
+        );
 
+        $categoryField = new GridField("Categories", "Categories list:", $this->Categories(), $categoryFieldConfig);
+        $fields->addFieldToTab("Root.Categories", $categoryField);
+        
         $gridField = new GridField("Locations", "Locations list:", $this->Locations(), $gridFieldConfig);
         $fields->addFieldToTab("Root.Locations", $gridField);
+
 
         return $fields;
     }
@@ -63,8 +78,10 @@ class Map extends Page
         $uniqueCategories = [];
         // Loop through the data and put it in a new array;
         foreach ($mapLocations as $mapLocation) {
-            if (!in_array($mapLocation->Category, $uniqueCategories)) {
-                $uniqueCategories[] = array ('category' => $mapLocation->Category);
+            $category = $mapLocation->Category();
+            $incoming = array ('name' => $category->Name, 'image' => $category->Thumbnail());
+            if (!in_array($incoming, $uniqueCategories)) {
+                $uniqueCategories[] = $incoming;
             }
         }
         $uniqueCategories = new ArrayList($uniqueCategories);
