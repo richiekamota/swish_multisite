@@ -84,7 +84,7 @@ strong {
 }
 
 .navbar .navbar-brand {
-    max-width: 340px;
+    max-width: 470px;
 }
 
 .navbar .navbar-brand strong {
@@ -1136,7 +1136,7 @@ footer .contact h3 {
     }
 
     .navbar-header {
-        max-width: 312px;
+        max-width: 460px;
     }
 
     .navbar-nav > li a {
