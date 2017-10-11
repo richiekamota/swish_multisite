@@ -15,6 +15,11 @@ class HomePage extends Page
         'Subsite' => 'Subsite'
     );
 
+    public static $has_many = array(
+         'Social_Media' => 'Social_Media',
+         'Site_Link' => 'Site_Link'
+    );
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();
@@ -23,6 +28,37 @@ class HomePage extends Page
             TextField::create("BannerContent", "Hero Content"),
             HiddenField::create('SubsiteID','SubsiteID', Subsite::currentSubsiteID()),
         ), "Content");
+
+            $gridFieldConfig = GridFieldConfig::create()->addComponents(
+            new GridFieldToolbarHeader(),
+            new GridFieldAddNewButton('toolbar-header-right'),
+            new GridFieldSortableHeader(),
+            new GridFieldDataColumns(),
+            new GridFieldPaginator(20),
+            new GridFieldEditButton(),
+            new GridFieldDeleteAction(),
+            new GridFieldDetailForm(),
+            new GridFieldSortableRows('SortID')
+        );
+
+        
+        $gridField = new GridField("Social_Media", "Social Media", $this->Social_Media(), $gridFieldConfig);
+        $fields->addFieldToTab("Root.SocialMedia", $gridField);
+
+         $gridFieldConfig2 = GridFieldConfig::create()->addComponents(
+            new GridFieldToolbarHeader(),
+            new GridFieldAddNewButton('toolbar-header-right'),
+            new GridFieldSortableHeader(),
+            new GridFieldDataColumns(),
+            new GridFieldPaginator(20),
+            new GridFieldEditButton(),
+            new GridFieldDeleteAction(),
+            new GridFieldDetailForm(),
+            new GridFieldSortableRows('SortID')
+        );
+
+        $gridField = new GridField("Site_Link", "Site Links", $this->Site_Link(), $gridFieldConfig2);
+        $fields->addFieldToTab("Root.SiteLinks", $gridField);
 
         return $fields;
     }
