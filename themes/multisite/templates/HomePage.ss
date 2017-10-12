@@ -48,62 +48,27 @@
     <div class="container">
         <h1>$Title</h1>
 
-         <article> 
-              <article>  
-                     <% if Social_Media %> 
-                     <% loop Social_Media %>              
-             <div class="row"> 
-               <div class="col-lg-4 col-md-12"> 
-                 <div class="social-block"> 
-                   <div class="icon-container">                           
-                    <h4>$Title</h4>                                 
-                    <p>$SocialMediaIcon</p>  
-                 </div>                                                           
-                   </div>                     
-                  </div>  
-                </div>  
-                <% end_loop %> 
-               <% end_if %>      
-        </article>      
-
-        </article>     
-        
-         <%-- <article style="float:left">
-         <% if Site_Link %>
-            <% loop Site_Link %>                
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="content-block">
-                            <h2>$Title</h2>                                
-                                <p>$SiteLinksImage</p>
-                            </div>                        
-                    </div>
-                    
-                </div>
-
+        <% if Social_Media %>
+        <ul class="social-container">
+            <% loop Social_Media %>
+             <li class="social-link">
+                 <a href="$URL">$SocialMediaIcon</a>
+             </li>
             <% end_loop %>
+        </ul>
+        <% end_if %>
 
-        <% end_if %>
-    </article> --%>
-    <article>
         <% if Site_Link %>
-           <% loop Site_Link %>
-        <div class="col-lg-4">
-         <div class="thumbnail">
-        <!-- Place the anchor tag here to cover both your caption and image -->
-        <a href="#" class="">
-            <div class="caption">
-                <h4>$Title</h4>
-                <p></p>
-            </div> 
-            <p>$SiteLinksImage</p>           
-        </a> 
-      </div>
-    </div>
-     <% end_loop %>
+        <ul class="site-links">
+        <% loop Site_Link %>
+            <li class="site-link" style="background-image: url($SiteLinksImage.URL)">
+                <a href="$URL" target="_blank">
+                    $Title
+                </a>
+            </li> 
+        <% end_loop %>
+        </ul>
         <% end_if %>
-  </article>
-    
         
     </div>
 

@@ -160,18 +160,14 @@ strong {
 @media screen and (min-width: 768px) {
 
     .navbar-brand {
-
         margin-top: 15px;
         margin-bottom: 20px;
-
     }
 
     .navbar-nav {
-
         margin-top: 40px;
         margin-bottom: 20px;
         float: right;
-
     }
 
     .navbar-nav > li > ul {
@@ -179,12 +175,15 @@ strong {
     }
 
     .navbar-nav > li:hover > ul {
-
         display: block;
         position: absolute;
         border-top: none;
         width: 200px;
         z-index: 999;
+    }
+
+    .sub-links{
+        background-color: #1f1f1f;
     }
 
 }
@@ -336,7 +335,7 @@ strong {
 .content-block .contentBody, .property-caption .contentBody {
     float: left;
     width: 100%;
-    margin: 95px 0px 50px;
+    /* margin: 95px 0px 50px; */
 }
 
 .content-block .contentBody p {
@@ -896,6 +895,117 @@ footer .contact h3 {
     bordeR: 1px solid #e75300 !important;
 }
 
+/*-------------- TEAM MEMBERS --------------*/
+
+.staff_members{
+    
+}
+
+.staff_members .content-block{
+    padding: 50px 30px;
+}
+
+.staff_members .content-block img {
+    max-width: 100%
+}
+
+
+.staff_members .content-block h2 {
+    float:left;
+    width: 100%;
+    padding: 10px 0px 0px;
+    margin: 0px;
+    max-width: 100%;
+}
+
+
+.staff_members .content-block p {
+    float:left;
+    width: 100%;
+    padding: 0px 0px;
+
+}
+    
+/*------------ GALLERY ----------------*/
+
+
+
+.content-block{
+    padding: 50px 30px;
+}
+
+.content-block img {
+    float: left;
+    max-width: 100%;
+    max-height: 100px;
+    padding:0px 0px 10px 10px;    
+}
+
+
+.content-block h2 {
+    float:left;       
+    margin: 0px 0px 10px 0px;
+    max-width: 100%;
+    padding: 0px 10px 20px;
+}
+
+
+.content-block p {
+    float:left;
+    width: 100%;
+}
+
+
+
+/*----------SOCIAL MEDIA-------*/
+
+.social-container{
+    bottom: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.social-link{
+    align-items: center;
+    display: flex;
+    float: left;
+}
+.social-link img{
+    height: 25px;
+    margin: 20px;
+    width: 25px;
+}
+
+/*----------SITE LINKS-------*/
+
+.site-links{
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20vh;
+}
+.site-link{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.site-link a{
+    background-color: rgba(0,0,0, 0.5);
+    color: #ffffff;
+    display: block;
+    font-size: 3vw;
+    height: 150px;
+    padding: 2vw;
+    text-align: center;
+    width: 20vw;
+}
+    
+
 /*-------- RESPONSIVE BREAKPOINTS -------------*/
 
 @media screen and  (min-width: 1200px) {
@@ -1170,15 +1280,10 @@ footer .contact h3 {
     }
 
     .navbar-nav > li:first-child a {
-
         padding-left: 0;
-
     }
-
     .navbar-nav > li:last-child a {
-
         padding-right: 0;
-
     }
 
     .navbar-header {
@@ -1197,8 +1302,15 @@ footer .contact h3 {
     .map-container {
         margin-top: 130px;
     }
+    .site-links{
+        display: block;
+    }
+    .social-link img{
+        height: 35px;
+        margin: 10px;
+        width: 35px;
+    }
 }
-
 
 @media screen and (max-width: 425px) {
 

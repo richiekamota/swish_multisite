@@ -30,8 +30,8 @@ class Social_Media extends DataObject
 
         // Name, Description and Website fields
         return new FieldList(
-            new TextField('Title', 'Social Media'),
-            new TextField('URL','URL'),
+            new TextField('Title', 'Social Media Title'),
+            new TextField('URL','URL (http://facebook.com)'),
             $uploader   
         );
 

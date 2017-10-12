@@ -8,7 +8,8 @@ class ContentBlock extends DataObject
         'Subtitle' => 'Varchar(255)',
         'Body' => 'HTMLText',
         'Type' => 'Enum("Text,Single Image,Double Image")',
-        'SortID' => 'Int'
+        'SortID' => 'Int',
+        'NavID' => 'Varchar(255)'
     );
 
     // One-to-one relationship with profile picture and contact list page
@@ -45,5 +46,10 @@ class ContentBlock extends DataObject
 
         );
 
+    }
+
+    public function onBeforeWrite() {
+        parent::onBeforeWrite();
+        $this->NavID = strtolower(str_replace(" ", "-", $this->Title));
     }
 }

@@ -29,7 +29,7 @@
           long: "$Long",
           description: "$Description",
           category: "$Category.Name",
-          image: "$MainImage.URL",
+          image: "$Thumbnail.URL",
         });
     </script>
 <% end_loop %>

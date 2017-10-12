@@ -10,11 +10,11 @@
 
         <% if ContentBlocks %>
             <% loop ContentBlocks %>
-                <div class="content-block">
+                <div id="$NavID" class="content-block">
                     <div class="row">
                         <div class="col-lg-4">
                             <h2>$Title
-                                <span>$Subtitle</span></h2>
+                            <span>$Subtitle</span></h2>
                         </div>
                         <div class="col-lg-8">
                             <div class="contentBody">$Body</div>
