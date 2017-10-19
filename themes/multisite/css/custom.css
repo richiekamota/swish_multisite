@@ -274,7 +274,6 @@ strong {
 }
 
 .home-banner {
-    height: 400px;
     background: #666 url(../images/background.jpg);
     background-size: cover;
     background-position: center center;
@@ -291,7 +290,6 @@ strong {
 }
 
 .main-area > .container {
-
     padding-bottom: 2rem;
 }
 
@@ -756,10 +754,11 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
 .map__category {
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     color: white;
     font-size: 20px;
     margin-bottom: 0;
-    min-height: 140px;
+    min-height: 100px;
     padding: 16px;
     text-align: right;
     width: 20vw;
@@ -807,7 +806,7 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
 
 footer {
     background-color: #a3a3a3;
-    padding: 8rem 0;
+    padding: 5rem 0;
     color: #1f1f1f;
     font-size: 31px;
 }
@@ -901,26 +900,34 @@ footer .contact h3 {
     
 }
 
-.staff_members .content-block{
+.staff_members{
     padding: 50px 30px;
 }
 
-.staff_members .content-block img {
+.staff_member{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.staff_member img {
     max-width: 100%
 }
 
-
-.staff_members .content-block h2 {
+.staff_member h2 {
+    color: #e75300;
     float:left;
-    width: 100%;
     padding: 10px 0px 0px;
     margin: 0px;
     max-width: 100%;
+    width: 100%;
 }
 
 
-.staff_members .content-block p {
+.staff_member p {
     float:left;
+    font-size: 20px;
     width: 100%;
     padding: 0px 0px;
 
@@ -987,7 +994,7 @@ footer .contact h3 {
     padding: 0;
     position: absolute;
     right: 20px;
-    top: 20vh;
+    bottom: 20px;
 }
 .site-link{
     background-size: cover;
@@ -998,9 +1005,8 @@ footer .contact h3 {
     background-color: rgba(0,0,0, 0.5);
     color: #ffffff;
     display: block;
-    font-size: 3vw;
-    height: 150px;
-    padding: 2vw;
+    font-size: 30px;
+    padding: 1vw;
     text-align: center;
     width: 20vw;
 }

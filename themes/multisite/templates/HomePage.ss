@@ -32,14 +32,12 @@
 </div>
 
 
-    <% include NavigationArea %>
+<% include NavigationArea %>
 
 
 
 <div class="home-banner" data-slides='["{$ThemeDir}/images/site{$SubsiteID}/banner1.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner2.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner3.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner4.jpg"]'>
-    <div class="container">
-
-    </div>
+    <div class="container"></div>
 </div>
 
 
@@ -61,7 +59,7 @@
         <% if Site_Link %>
         <ul class="site-links">
         <% loop Site_Link %>
-            <li class="site-link" style="background-image: url($SiteLinksImage.URL)">
+            <li class="site-link">
                 <a href="$URL" target="_blank">
                     $Title
                 </a>

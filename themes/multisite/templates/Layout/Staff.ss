@@ -6,22 +6,18 @@
     </div>
 </div>
 <div class="container staff_members" name="bannerBottom" id="bannerBottom">
-
-    <article>
-
-        <div class="row">
-            <% if Staff_Members %>
-                <% loop Staff_Members %>
-                    <div class="col-lg-4">
-                        <div class="content-block">
-                            <span>$ProfilePic</span>
-                            <h2>$Name</h2>
-                            <p><strong>$JobTitle</strong></p>
-                        </div>
+    <div class="row">
+        <% if Staff_Members %>
+            <% loop Staff_Members %>
+                <div class="col-sm-3">
+                    <div class="staff_member">
+                        $ProfilePic
+                        <h2>$Name</h2>
+                        <p><strong>$JobTitle</strong></p>
                     </div>
-                <% end_loop %>
-            <% end_if %>
-        </div>
-    </article>
+                </div>
+            <% end_loop %>
+        <% end_if %>
+    </div>
 
 </div>
