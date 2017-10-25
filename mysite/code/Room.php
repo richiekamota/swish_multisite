@@ -42,7 +42,7 @@ class Room extends DataObject
         $thumbField = new UploadField('Thumbnail', 'Thumbnail');
         $thumbField->allowedExtensions = array('jpg', 'png', 'gif');
        //PDF Uploader
-        $pdfField = new UploadField('MainImage', 'Main Image');
+        $pdfField = new UploadField('PDFFile', 'PDF File Upload');
         $pdfField->allowedExtensions = array('pdf');
         // Name, Description and Website fields
         return new FieldList(
