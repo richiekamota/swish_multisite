@@ -50,8 +50,8 @@
                         </tfoot>
                         <tbody>
                             <% if Rooms %>
-                                <% loop Rooms %>
-                                <tr <% if AvailabilityStatus == 'Not Available' %>class="sold"<% end_if %>>
+                                <% loop Rooms %>                                  
+                                <tr <% if AvailabilityStatus == 'Not Available' %>class="sold"<% end_if %>>                                    
                                     <td>$ID</td>
                                     <td>$FloorNumber</td>
                                     <td>$UnitNumber</td>
@@ -60,7 +60,17 @@
                                     <td>$InteriorSize</td>
                                     <td>$ExteriorSize</td>
                                     <td>$TotalSize</td>
-                                </tr>
+                                    <% if $MainImage %>                                                                                                                                   
+                                    <td>
+                                        <% with $MainImage %>                                        
+                                        <a href="$URL" class="btn btn-warning btn-block">
+                                        <i class="fa fa-download"></i>
+                                             Download Floor Plan ($Extension) [$size]
+                                        </a> 
+                                        <% end_with %>                                         
+                                    </td>
+                                    <% end_if %>                                                                                              
+                                </tr>                                 
                                 <% end_loop %>
                             <% end_if %>
                         </tbody>
