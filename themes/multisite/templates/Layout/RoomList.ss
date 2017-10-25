@@ -52,6 +52,8 @@
     <script type="text/javascript" src="{$ThemeDir}/javascript/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/page.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.min.css"></link>
     <script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
     <script>

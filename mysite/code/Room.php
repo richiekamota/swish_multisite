@@ -41,11 +41,9 @@ class Room extends DataObject
         // Profile picture field
         $thumbField = new UploadField('Thumbnail', 'Thumbnail');
         $thumbField->allowedExtensions = array('jpg', 'png', 'gif');
-
+       //PDF Uploader
         $imageField = new UploadField('MainImage', 'Main Image');
-        $imageField->allowedExtensions = array('jpg', 'png', 'gif');
-
-
+        $imageField->allowedExtensions = array('pdf');
         // Name, Description and Website fields
         return new FieldList(
             new TextField('Name', 'Name'),
@@ -63,8 +61,6 @@ class Room extends DataObject
             $thumbField,
             $imageField,
             new HTMLEditorField('Description', 'Description')
-
         );
-
     }
 }
