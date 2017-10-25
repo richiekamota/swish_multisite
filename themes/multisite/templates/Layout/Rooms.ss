@@ -3,72 +3,83 @@
         <article>
             <div class="breadcrumb"><a href="/property"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp; Back to Site Plan</a></div>
             <% if $Floors %>
-                <ul class="floorList">
-                    <% loop $Floors %>
-                        <li><a href="/property/floors/$FloorNumber"
-                               <% if $FloorNumber == $Up.CurrentFloorNumber %>class="selected"<% end_if %>>$Name</a>
-                        </li>
-                    <% end_loop %>
-                </ul>
-            <% end_if %>
+            <ul class="floorList">
+                <% loop $Floors %>
+                <li><a href="/property/floors/$FloorNumber"
+                   <% if $FloorNumber == $Up.CurrentFloorNumber %>class="selected"<% end_if %>>$Name</a>
+               </li>
+               <% end_loop %>
+           </ul>
+           <% end_if %>
 
-            <div class="floorDetails">
-                <div class="floorImage">
-                    <% if SelectedFloor %>
-                        <% loop SelectedFloor %>
-                            $MainImage
-                        <% end_loop %>
-                    <% end_if %>
-                    <%--<p>&copy; CLICK AVAILABLE UNIT NUMBERS FOR ADDITIONAL INFORMATION</p>--%>
-                </div>
-                <div class="roomTable">
-
-                    <table id="roomDataTable" class="display" cellspacing="0" width="100%">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Floor</th>
-                            <th>Unit No.</th>
-                            <th>* Price Inc. VAT</th>
-                            <th>Bedrooms</th>
-                            <th>Interior m<sup>2</sup></th>
-                            <th>Terrace m<sup>2</sup></th>
-                            <th>Total m<sup>2</sup></th>
-                        </tr>
-                        </thead>
-                        <tfoot>
-                        <tr>
-                            <th>ID</th>
-                            <th>Floor</th>
-                            <th>Unit No.</th>
-                            <th>* Price Inc. VAT</th>
-                            <th>Bedrooms</th>
-                            <th>Interior m<sup>2</sup></th>
-                            <th>Terrace m<sup>2</sup></th>
-                            <th>Total m<sup>2</sup></th>
-                        </tr>
-                        </tfoot>
-                        <tbody>
-                            <% if Rooms %>
-                                <% loop Rooms %>
-                                <tr <% if AvailabilityStatus == 'Not Available' %>class="sold"<% end_if %>>
-                                    <td>$ID</td>
-                                    <td>$FloorNumber</td>
-                                    <td>$UnitNumber</td>
-                                    <td>$Price</td>
-                                    <td>$Bedrooms</td>
-                                    <td>$InteriorSize</td>
-                                    <td>$ExteriorSize</td>
-                                    <td>$TotalSize</td>
-                                </tr>
-                                <% end_loop %>
-                            <% end_if %>
-                        </tbody>
-                    </table>
-
-                </div>
+           <div class="floorDetails">
+            <div class="floorImage">
+                <% if SelectedFloor %>
+                <% loop SelectedFloor %>
+                $MainImage
+                <% end_loop %>
+                <% end_if %>
+                <%--<p>&copy; CLICK AVAILABLE UNIT NUMBERS FOR ADDITIONAL INFORMATION</p>--%>
             </div>
+            <div class="roomTable">
 
-        </article>
-    </div>
+                <table id="roomDataTable" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Floor</th>
+                            <th>Unit No.</th>
+                            <th>* Price Inc. VAT</th>
+                            <th>Bedrooms</th>
+                            <th>Interior m<sup>2</sup></th>
+                            <th>Terrace m<sup>2</sup></th>
+                            <th>Total m<sup>2</sup></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Floor</th>
+                            <th>Unit No.</th>
+                            <th>* Price Inc. VAT</th>
+                            <th>Bedrooms</th>
+                            <th>Interior m<sup>2</sup></th>
+                            <th>Terrace m<sup>2</sup></th>
+                            <th>Total m<sup>2</sup></th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <% if Rooms %>
+                        <% loop Rooms %>                                  
+                        <tr <% if AvailabilityStatus == 'Not Available' %>class="sold"<% end_if %>>                                    
+                            <td>$ID</td>
+                            <td>$FloorNumber</td>
+                            <td>$UnitNumber</td>
+                            <td>$Price</td>
+                            <td>$Bedrooms</td>
+                            <td>$InteriorSize</td>
+                            <td>$ExteriorSize</td>
+                            <td>$TotalSize</td>
+                            <td></td>
+                            <% if $PDFFile %>                                                                                                                                   
+                            <td>
+                                <% with $PDFFile %>                                        
+                                <a href="$URL" class="btn btn-warning btn-md">
+                                    <i class="fa fa-download"></i>
+                                    Download Floor Plan ($Extension) [$size]
+                                </a> 
+                                <% end_with %>                                         
+                            </td>
+                            <% end_if %>                                                                                              
+                        </tr>                                 
+                        <% end_loop %>
+                        <% end_if %>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </article>
+</div>
 </div>
