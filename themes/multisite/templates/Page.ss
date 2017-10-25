@@ -50,9 +50,9 @@
 
     <script type="text/javascript" src="{$ThemeDir}/javascript/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/page.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.min.css"></link>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.all.min.js"></script>
+
 </div>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZV6K0liKsEk6o8hk3oBDZn4LAZlj9rE&callback=initMap">

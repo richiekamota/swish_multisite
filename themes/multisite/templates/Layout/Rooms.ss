@@ -59,18 +59,13 @@
                                     <td>$Bedrooms</td>
                                     <td>$InteriorSize</td>
                                     <td>$ExteriorSize</td>
-                                    <td>$TotalSize</td>                                    
-                                    <td>
-                                        <a href="javascript:;" onclick="javascript: floorReserve($FloorNumber);" class="btn btn-info btn-md">                                       
-                                             Reserve Floor
-                                        </a>
-                                    </td>
+                                    <td>$TotalSize</td>
                                     <% if $MainImage %>                                                                                                                                   
                                     <td>
                                         <% with $MainImage %>                                        
-                                        <a href="$URL" class="btn btn-warning btn-sm">
+                                        <a href="$URL" class="btn btn-warning btn-block">
                                         <i class="fa fa-download"></i>
-                                             Download Plan ($Extension) [$size]
+                                             Download Floor Plan ($Extension) [$size]
                                         </a> 
                                         <% end_with %>                                         
                                     </td>
@@ -86,3 +81,4 @@
 
         </article>
     </div>
+</div>
