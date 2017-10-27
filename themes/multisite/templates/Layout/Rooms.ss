@@ -60,10 +60,16 @@
                                     <td>$InteriorSize</td>
                                     <td>$ExteriorSize</td>
                                     <td>$TotalSize</td>
-                                    <% if $MainImage %>                                                                                                                                   
+                                    <td></td>                                    
                                     <td>
-                                        <% with $MainImage %>                                        
-                                        <a href="$URL" class="btn btn-warning btn-block">
+                                        <a href="javascript:;" onclick="javascript: floorReserve($UnitNumber);" class="btn btn-info btn-md">                                       
+                                             Reserve Unit
+                                        </a>
+                                    </td>
+                                    <% if $PDFFile %>                                                                                                                                   
+                                    <td>
+                                        <% with $PDFFile %>                                        
+                                        <a href="$URL" class="btn btn-warning btn-md">
                                         <i class="fa fa-download"></i>
                                              Download Floor Plan ($Extension) [$size]
                                         </a> 
@@ -81,4 +87,3 @@
 
         </article>
     </div>
-</div>

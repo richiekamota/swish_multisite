@@ -72,8 +72,7 @@
 
     <script type="text/javascript" src="{$ThemeDir}/javascript/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{$ThemeDir}/javascript/page.js"></script>
-
+    <script type="text/javascript" src="{$ThemeDir}/javascript/page.js"></script>   
     <script>
         $(document).ready(function () {
             $(".fade-overlay").delay(2000).fadeOut(2000);

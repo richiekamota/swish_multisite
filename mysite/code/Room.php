@@ -23,7 +23,7 @@ class Room extends DataObject
     // One-to-one relationship with profile picture and contact list page
     public static $has_one = array(
         'Thumbnail' => 'Image',
-        'MainImage' => 'Image',
+        'PDFFile' => 'Image',
         'Apartment' => 'Apartment',
         'Subsite' => 'Subsite'
     );
@@ -41,9 +41,11 @@ class Room extends DataObject
         // Profile picture field
         $thumbField = new UploadField('Thumbnail', 'Thumbnail');
         $thumbField->allowedExtensions = array('jpg', 'png', 'gif');
+
        //PDF Uploader
-        $imageField = new UploadField('MainImage', 'Main Image');
-        $imageField->allowedExtensions = array('pdf');
+        $pdfField = new UploadField('PDFFile', 'PDF File Upload');
+        $pdfField->allowedExtensions = array('pdf');
+
         // Name, Description and Website fields
         return new FieldList(
             new TextField('Name', 'Name'),
@@ -59,7 +61,7 @@ class Room extends DataObject
             new HiddenField('SubsiteID','SubsiteID', Subsite::currentSubsiteID()),
             new TextField('TotalSize', 'TotalSize'),
             $thumbField,
-            $imageField,
+            $pdfField,
             new HTMLEditorField('Description', 'Description')
         );
     }

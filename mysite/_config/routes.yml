@@ -5,5 +5,5 @@ After: 'framework/routes#coreroutes'
 Director:
   rules:
     'property/floors/$ID': 'Rooms_Controller',
-    'email/capture': 'Email_Controller'
+    'email': 'Email_Controller'
 ---
