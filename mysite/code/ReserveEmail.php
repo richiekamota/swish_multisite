@@ -7,6 +7,7 @@ class ReserveEmail extends DataObject
         'Name' => 'Varchar(255)',
         'Email' => 'Varchar(255)',
         'Unit' => 'Varchar(255)',
+        'Location' => 'Varchar(255)',
         'SubsiteID' => 'Int',
         'SortID' => 'Int'
     );

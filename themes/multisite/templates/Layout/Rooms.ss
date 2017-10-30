@@ -34,6 +34,7 @@
                             <th>Interior m<sup>2</sup></th>
                             <th>Terrace m<sup>2</sup></th>
                             <th>Total m<sup>2</sup></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -46,6 +47,7 @@
                             <th>Interior m<sup>2</sup></th>
                             <th>Terrace m<sup>2</sup></th>
                             <th>Total m<sup>2</sup></th>
+                            <th></th>
                         </tr>
                         </tfoot>
                         <tbody>
@@ -59,8 +61,7 @@
                                     <td>$Bedrooms</td>
                                     <td>$InteriorSize</td>
                                     <td>$ExteriorSize</td>
-                                    <td>$TotalSize</td>
-                                    <td></td>                                    
+                                    <td>$TotalSize</td>                               
                                     <td>
                                         <a href="javascript:;" onclick="javascript: floorReserve($UnitNumber);" class="btn btn-info btn-md">                                       
                                              Reserve Unit

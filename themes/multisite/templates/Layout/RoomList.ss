@@ -30,11 +30,7 @@
 
     <% include Header %>
 
-
-
     <% include NavigationArea %>
-
-
 
     <% if $URLSegment == 'home' %>
         <% include Banner %>

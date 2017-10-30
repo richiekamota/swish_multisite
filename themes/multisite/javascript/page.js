@@ -1,6 +1,4 @@
 // JavaScript Document
-
-
 $('.toTop').click(function () {
     $('html, body').animate({
         scrollTop: $("#top").offset().top
@@ -22,68 +20,63 @@ function priceSignUp(floorNumber) {
       inputPlaceholder:'Email',
       showCancelButton: false,
       confirmButtonText: 'Submit',
-      showLoaderOnConfirm: true,      
+      showLoaderOnConfirm: true,
       allowOutsideClick: false
-  }).then(email => {
+    }).then(function (email){
+        if(!isValidEmailAddress( email )) {
+        swal("Oh no!", "The submission failed! Please enter a valid email address.", "error");
+        }else{
+            return fetch('/email/capture?e=' + email);
+        }
+    }).then(function(results) {
 
-   if(!isValidEmailAddress( email )) {
-    swal("Oh no!", "The submission failed! Please enter a valid email address.", "error");
-}else{
-    return fetch('/email/capture?e=' + email);
-}
+        return results.json();
 
-}).then(results => {
+    }).then(function (json) {
 
-   return results.json();
+        window.location = "/property/floors/" + floorNumber;
 
-}).then(json => {
+    }).catch(function(err) {
 
-   window.location = "/property/floors/" + floorNumber;
+        if (err) {
+            swal("Oh no!", "The submission failed! Please try again.", "error");
 
-}).catch(err => {
-
-   if (err) {
-    swal("Oh no!", "The submission failed! Please try again.", "error");
-
-} else {
-    swal.stopLoading();
-    swal.close();
-}
-
-});
+        } else {
+            swal.stopLoading();
+            swal.close();
+        }
+    });
 
 }
 
 function floorReserve(unitNumber) {
     swal({
-      title: 'Please enter your name and email to reserve this unit',
-      html:
-      '<input type="text" id="swal-input1" class="swal2-input" placeholder="Name">' +
-      '<input type="email" id="swal-input2" class="swal2-input" placeholder="Email">' +
-      '<input type="hidden" id="swal-input3" class="swal2-input" value="' + unitNumber + '">', 
-      confirmButtonText: 'Submit',
-      allowOutsideClick: true,           
-      focusConfirm: false
-  }).then(function (result) {
-    if(document.getElementById('swal-input1').value  && document.getElementById('swal-input2').value && document.getElementById('swal-input3').value && isValidName(document.getElementById('swal-input1').value) && isValidEmailAddress(document.getElementById('swal-input2').value)){
-       $.get('/email/reservation?n=' + document.getElementById('swal-input1').value + 
-        '&e=' + document.getElementById('swal-input2').value + 
-        '&u=' + document.getElementById('swal-input3').value, function(data, status){            
-            if(status == 'success'){                
-               swal("Reservation Successful!","The unit has been reserved for you", "success");
-           }else{
-               swal("Oh no!", "The submission failed!", "error");
-           }
-       });             
-       if(response.status == 200){
-           swal("success");      
-       }else{
-          swal("Oh no!", "The submission failed!", "error");
-      }
-  }else{
-   swal("Oh no!", "The submission failed! Please enter a name and a valid email address.", "error");
-}
-}).catch(swal.noop)
+        title: 'Please enter your name and email to reserve this unit',
+        html:
+        '<input type="text" id="swal-input1" class="swal2-input" placeholder="Name">' +
+        '<input type="email" id="swal-input2" class="swal2-input" placeholder="Email">' +
+        '<input type="hidden" id="swal-input3" class="swal2-input" value="' + unitNumber + '">', 
+        confirmButtonText: 'Submit',
+        allowOutsideClick: true,           
+        focusConfirm: false
+    }).then(function (result) {
+        if(document.getElementById('swal-input1').value  && document.getElementById('swal-input2').value && document.getElementById('swal-input3').value && isValidName(document.getElementById('swal-input1').value) && isValidEmailAddress(document.getElementById('swal-input2').value)){
+        
+            var url = '/email/reservation?n=' + document.getElementById('swal-input1').value + '&e=' + document.getElementById('swal-input2').value + '&u=' + document.getElementById('swal-input3').value + '&sub=' + document.getElementById('location-title').innerHTML;
+            $.get(url, function(data, status){  
+                if(status == 'success'){ 
+                    swal("Reservation Successful!","The unit has been reserved for you", "success")
+                }else{
+                    swal("Oh no!", "The submission failed!", "error");
+                }
+            });
+        }else{
+            console.log(`IN here`);
+            swal("Oh no!", "The submission failed! Please enter a name and a valid email address.", "error");
+        }
+    }).catch(function (err) {
+        console.log(err);
+    })
 }
 
 function isValidEmailAddress(emailAddress) {

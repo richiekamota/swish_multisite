@@ -13,7 +13,7 @@
 
             <a class="navbar-brand" href="">
 
-                <strong>$SiteConfig.Title</strong>
+                <strong id="location-title">$SiteConfig.Title</strong>
                 <% if $SiteConfig.Tagline %>
                     <span>$SiteConfig.Tagline</span>
                 <% end_if %>
