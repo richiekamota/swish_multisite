@@ -3,28 +3,28 @@
         <article>
             <div class="breadcrumb"><a href="/property"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp; Back to Site Plan</a></div>
             <% if $Floors %>
-                <ul class="floorList">
-                    <% loop $Floors %>
-                        <li><a href="/property/floors/$FloorNumber"
-                               <% if $FloorNumber == $Up.CurrentFloorNumber %>class="selected"<% end_if %>>$Name</a>
-                        </li>
-                    <% end_loop %>
-                </ul>
-            <% end_if %>
+            <ul class="floorList">
+                <% loop $Floors %>
+                <li><a href="/property/floors/$FloorNumber"
+                   <% if $FloorNumber == $Up.CurrentFloorNumber %>class="selected"<% end_if %>>$Name</a>
+               </li>
+               <% end_loop %>
+           </ul>
+           <% end_if %>
 
-            <div class="floorDetails">
-                <div class="floorImage">
-                    <% if SelectedFloor %>
-                        <% loop SelectedFloor %>
-                            $MainImage
-                        <% end_loop %>
-                    <% end_if %>
-                    <%--<p>&copy; CLICK AVAILABLE UNIT NUMBERS FOR ADDITIONAL INFORMATION</p>--%>
-                </div>
-                <div class="roomTable">
+           <div class="floorDetails">
+            <div class="floorImage">
+                <% if SelectedFloor %>
+                <% loop SelectedFloor %>
+                $MainImage
+                <% end_loop %>
+                <% end_if %>
+                <%--<p>&copy; CLICK AVAILABLE UNIT NUMBERS FOR ADDITIONAL INFORMATION</p>--%>
+            </div>
+            <div class="roomTable">
 
-                    <table id="roomDataTable" class="display" cellspacing="0" width="100%">
-                        <thead>
+                <table id="roomDataTable" class="display" cellspacing="0" width="100%">
+                    <thead>
                         <tr>
                             <th>ID</th>
                             <th>Floor</th>
@@ -35,8 +35,8 @@
                             <th>Terrace m<sup>2</sup></th>
                             <th>Total m<sup>2</sup></th>
                         </tr>
-                        </thead>
-                        <tfoot>
+                    </thead>
+                    <tfoot>
                         <tr>
                             <th>ID</th>
                             <th>Floor</th>
@@ -82,8 +82,8 @@
                         </tbody>
                     </table>
 
-                </div>
             </div>
+        </div>
 
         </article>
     </div>
