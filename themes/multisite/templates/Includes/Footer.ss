@@ -29,7 +29,7 @@
                     <u><a href="https://www.google.co.za/maps/place/Swish+Properties/@-33.919659,18.4181434,17z/data=!4m12!1m6!3m5!1s0x1dcc6766c1866c89:0x95fc4917aaf92976!2sSwish+Properties!8m2!3d-33.919659!4d18.4203321!3m4!1s0x1dcc6766c1866c89:0x95fc4917aaf92976!8m2!3d-33.919659!4d18.4203321">
                     Head office: 27 (0) 21 447 72 44<br/>
                     80 Strand Street<br/> 8th Floor<br/> Cape Town, 8000<br/>
-                    </u></a>
+                    </a></u>
                         <u><a href="mailto:info@swishproperties.co.za">info@swishproperties.co.za</a></u>
                     </h3>
                 </div>
