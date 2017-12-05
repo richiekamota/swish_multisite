@@ -27,7 +27,7 @@
           name: "$Title",
           lat: "$Lat",
           long: "$Long",
-          description: "$Description",
+          description: '$Description',
           category: "$Category.Name",
           image: "$Thumbnail.URL",
         });
