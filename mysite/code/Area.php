@@ -3,7 +3,9 @@
 class Area extends Page
 {
 
-    private static $db = array();
+    private static $db = array(
+        'SmallHero' => 'Boolean'
+    );
 
     private static $has_one = array(
         'Banner' => 'Image',
@@ -22,6 +24,7 @@ class Area extends Page
 
         $fields->addFieldsToTab("Root.Main", array(
 
+            CheckboxField::create('SmallHero'),
             $uploader1 = UploadField::create('Banner', 'Image'),
 
         ), "Metadata");

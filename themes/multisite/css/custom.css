@@ -1,74 +1,84 @@
 /* CSS Document for user  */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
-p {
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 1.63;
-    text-align: left;
-}
 
-strong {
-    font-weight: 500;
-    color: #1f1f1f;
-}
+/* 
+* BASE STYLES
+*/
 
-.small-text {
-    font-size: 22px !important;
-}
+    p {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.63;
+        text-align: left;
+    }
 
-* {
-    font-family: 'Lato', sans-serif;
-}
+    strong {
+        font-weight: 500;
+        color: #1f1f1f;
+    }
 
-.preload{
-    position: absolute;
-    z-index: -1000;
-    left: -99999px;
-}
+    .small-text {
+        font-size: 22px !important;
+    }
 
-.breadcrumb {
-    padding: 30px 0px;
-    margin-bottom: 0px;
-    list-style: none;
-    background: none;
-    border-radius: 0px;
-}
+    * {
+        font-family: 'Lato', sans-serif;
+    }
 
-.breadcrumb a {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 2.5;
-    text-align: center;
-    color: #e75300;
-    text-decoration: none;
-}
+    .preload{
+        position: absolute;
+        z-index: -1000;
+        left: -99999px;
+    }
 
-.fade-overlay {
-    float: left;
-    width: 100%;
-    background: #1f1f1f;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    z-index: 10000;
-}
+    .breadcrumb {
+        padding: 30px 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        background: none;
+        border-radius: 0px;
+    }
 
-.fade-overlay .overlay {
-    float: none;
-    margin: 25% auto 0px;
-    width: 80%;
-    text-align: center;
-}
+    .breadcrumb a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2.5;
+        text-align: center;
+        color: #e75300;
+        text-decoration: none;
+    }
 
-.fade-overlay .overlay img {
-    max-width: 400px;
-}
+    .fade-overlay {
+        float: left;
+        width: 100%;
+        background: #1f1f1f;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        z-index: 10000;
+    }
 
-/*----------- OVERLAY ------------------*/
+    .fade-overlay .overlay {
+        float: none;
+        margin: 25% auto 0px;
+        width: 80%;
+        text-align: center;
+    }
 
-/*------------ NAVIGATION ---------------*/
+    .fade-overlay .overlay img {
+        max-width: 400px;
+    }
+
+    /* Media Queries */
+
+/* 
+* NAVIGATION STYLES
+*/
+
+    /* Media Queries */
+    
 
 .navbar {
     border-radius: 0;
@@ -206,7 +216,11 @@ strong {
     font-size: .9em;
 }
 
-/*------ BANNER --------------*/
+/* 
+* BANNER STYLES
+*/
+
+    /* Media Queries */
 
 [data-slides] {
     background-image: url(../images/banner1.jpg); /* Default image. */
@@ -228,14 +242,17 @@ strong {
 
 }
 
+.banner.small{
+    min-height: 40vh;
+}
+
 .banner .container > h1 {
     text-align: center;
     color: #ffffff;
     float: left;
     width: 100%;
-    /* margin-top: 200px; */
     position: absolute;
-    top: 50%;
+    top: 32%;
     text-transform: uppercase;
     left: 0;
     font-weight: 300;
@@ -243,6 +260,10 @@ strong {
     font-size: 80px;
     max-width: 100%;
     overflow: hidden;
+}
+
+.banner.small .bannerScroll{
+    display: none;
 }
 
 .bannerScroll {
@@ -285,10 +306,6 @@ strong {
     height: 100%;
 }
 
-.main-area {
-
-}
-
 .main-area > .container {
     padding-bottom: 2rem;
 }
@@ -310,9 +327,6 @@ strong {
 }
 
 /*----------- AREA ------------*/
-.content-block {
-
-}
 
 .content-block h2, .property-caption h2 {
     font-size: 30px;
@@ -764,8 +778,6 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
     width: 20vw;
 }
 
-.map__category-option {
-}
 .map__category input{
     opacity: 0;
 }
@@ -799,7 +811,6 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
     font-weight: 700;
     margin-bottom: 5px;
 }
-.map__marker-info-desc {}
 
 
 /*--------------- FOOTER -------------------*/
@@ -895,10 +906,6 @@ footer .contact h3 {
 }
 
 /*-------------- TEAM MEMBERS --------------*/
-
-.staff_members{
-    
-}
 
 .staff_members{
     padding: 50px 30px;
@@ -1067,6 +1074,7 @@ footer .contact h3 {
 
 @media screen and  (max-width: 768px) {
 
+
     footer a {
         font-size: 25px;
     }
@@ -1120,9 +1128,10 @@ footer .contact h3 {
         width: 50%;
         float: left;
     }
-}
 
-@media screen and (max-width: 768px) {
+    .banner{
+        margin-top: 80px;
+    }
 
     .banner .container > h1, .main-area.home > .container > h1 {
         font-size: 50px;
@@ -1319,6 +1328,10 @@ footer .contact h3 {
 }
 
 @media screen and (max-width: 425px) {
+
+    #location-title{
+        line-height: 20px;
+    }
 
     footer a {
         font-size: 20px;
