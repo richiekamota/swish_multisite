@@ -1,4 +1,4 @@
-<div class="banner <% if $SmallHero %>small<% end_if %>" <% if $Banner.URL %>style="background-image: url($Banner.URL)" <% end_if %>>
+<div class="banner <% if $SmallHero %>small<% end_if %>" <% if not $Banner.URL == "" %>style="background-image: url($Banner.URL)" <% end_if %>>
     <div class="container">
         <h1>$Title</h1>
         <div class="bannerScroll"><a href="#bannerBottom">SCROLL<br/><i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
@@ -7,7 +7,6 @@
 <div class="container" name="bannerBottom" id="bannerBottom">
 
     <article>
-
         <% if ContentBlocks %>
             <% loop ContentBlocks %>
                 <div id="$NavID" class="content-block">
