@@ -25,6 +25,8 @@ class ContentBlock extends DataObject
         'Type' => 'Type'
     );
 
+    public static $default_sort = 'SortID ASC';
+
     public function getCMSFields()
     {
 
