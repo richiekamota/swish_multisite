@@ -83,7 +83,7 @@
 .navbar {
     border-radius: 0;
     margin-bottom: 0;
-    height: 134px;
+    /* height: 134px; */
     background-color: #1f1f1f;
     position: absolute;
     width: 100%;
@@ -969,8 +969,6 @@ footer .contact h3 {
     width: 100%;
 }
 
-
-
 /*----------SOCIAL MEDIA-------*/
 
 .social-container{
@@ -1131,6 +1129,10 @@ footer .contact h3 {
 
     .banner{
         margin-top: 80px;
+    }
+
+    .banner.small{
+        margin-top: 100px;
     }
 
     .banner .container > h1, .main-area.home > .container > h1 {
