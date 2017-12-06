@@ -753,7 +753,7 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
 }
 
 .map__categories {
-    background-color: #a3a3a3;
+    /* background-color: #a3a3a3; */
     position: absolute;
     right: 10px;
     top: 70px;
@@ -771,9 +771,9 @@ table.dataTable.display tbody tr.sold, table.dataTable.display tbody tr.sold td 
     background-position: center center;
     color: white;
     font-size: 20px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     min-height: 100px;
-    padding: 16px;
+    padding: 5px;
     text-align: right;
     width: 20vw;
 }
