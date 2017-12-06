@@ -239,11 +239,11 @@
     background-position: center center;
     position: relative;
     min-height: 100vh;
-
 }
 
 .banner.small{
     min-height: 40vh;
+    margin-top: 130px;
 }
 
 .banner .container > h1 {
@@ -1339,6 +1339,10 @@ footer .contact h3 {
 
     .banner .container > h1, .main-area.home > .container > h1 {
         font-size: 34px;
+    }
+
+    .banner.small{
+        margin-top: 80px;
     }
 
     .paginate_button {
