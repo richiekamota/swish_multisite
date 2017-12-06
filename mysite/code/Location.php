@@ -26,6 +26,8 @@ class Location extends DataObject
         'Long' => 'Long'
     );
 
+    public static $default_sort = 'SortID ASC';
+
     public function getCMSFields()
     {
 
