@@ -28,7 +28,7 @@ class Staff extends Page
 
             $uploader1 = UploadField::create('Banner', 'Image'),
 
-        ), "Metadata");
+        ), "Content");
 
         $uploader1->getValidator()->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
 
