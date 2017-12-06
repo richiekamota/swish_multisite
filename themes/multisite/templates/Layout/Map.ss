@@ -8,7 +8,7 @@
             <li>
                 <label for="category_$name" class="map__category"  style="background-image: url($image.URL)">
                     $name
-                    <input type="checkbox" name="mapCategories" value="$name" id="category_$name" onchange="changeMarkersCategory('mapCategories')" checked>
+                    <input type="checkbox" name="mapCategories" value="$name" id="category_$name" onchange="changeMarkersCategory()" checked>
                 </label>
             </li>
             <% end_loop %>

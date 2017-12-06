@@ -266,40 +266,33 @@ function initMap() {
     });
 }
 
-function changeMarkersCategory(checkBoxName) {
+function changeMarkersCategory() {
 
-    // Let's get the values of the checkbox
-    var checkboxes = document.querySelectorAll('[name=' + checkBoxName +']');
-    var checkedCategories = [];
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-            checkedCategories.push(checkboxes[i].value);
-        }
-    }
+  var iconBase = 'http://swishproperties.incendiaryblue.com/themes/multisite/images/mapswish.png';
+  var checkboxes = document.querySelectorAll('[name="mapCategories"]');
+  var checkedCategories = [];
+  for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+          checkedCategories.push(checkboxes[i].value);
+      }
+  }
 
-    mapMarkers.forEach(function(marker) {
-        // marker.setVisible(false);
-        marker.setIcon(
-            {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 10,
-                strokeColor: '#000',
-                strokeWeight: 4,
-            }
-        );
-        // Iterate through categories
-        checkedCategories.forEach(function(category) {
-            if (marker.category == category) {
-                // marker.setVisible(true);
-                marker.setIcon(
-                    {
-                        path: google.maps.SymbolPath.CIRCLE,
-                        scale: 10,
-                        strokeColor: '#e75300',
-                        strokeWeight: 4,
-                    }
-                );
-            }
-        });
-    });
+  mapMarkers.forEach(function(marker) {
+      marker.setIcon({
+        url: iconBase,
+        anchor: new google.maps.Point(18, 18) 
+      });
+      checkedCategories.forEach(function(category) {
+          if (marker.category == category) {
+              marker.setIcon(
+                  {
+                      path: google.maps.SymbolPath.CIRCLE,
+                      scale: 10,
+                      strokeColor: '#e75300',
+                      strokeWeight: 4,
+                  }
+              );
+          }
+      });
+  });
 }
