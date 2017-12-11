@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <p><a href="/"><img src="{$ThemeDir}/images/logo.svg" class="footer-logo"/></a></p>
+                <p><a href="/"><img src="{$ThemeDir}/images/swish-orange-float.png" class="footer-logo"/></a></p>
                 <p class="address">
                     <% if $SiteConfig.Title == 'Akapelo' %>
                         Akapelo<br/>
