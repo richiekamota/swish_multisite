@@ -27,7 +27,7 @@
 <body class="$ClassName" id="Page{$ID}">
 <div class="fade-overlay">
     <div class="overlay">
-        <img src="{$ThemeDir}/images/logo-white.svg" class="overlay-logo"/>
+        <img src="{$ThemeDir}/images/swish-orange-float.png" class="overlay-logo"/>
     </div>
 </div>
 
