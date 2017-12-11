@@ -11,7 +11,9 @@ SSViewer:
   theme: 'simple'
 Debug:
   friendly_error_httpcode: true
-
+SiteConfig:
+  extensions:
+    - CustomSiteConfig
 Image:
   extensions:
     - GalleryImage
