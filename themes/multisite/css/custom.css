@@ -867,14 +867,17 @@ footer .legal a:hover {
     color: #e75300;
 }
 
-footer .address {
+footer .address {    
+    float: left;
+    margin: 50px 0px;
+    line-height: 45px;
+}
+
+footer .address h3{
     font-size: 31px;
     font-weight: 500;
     text-align: left;
     color: #1f1f1f;
-    float: left;
-    margin: 50px 0px;
-    line-height: 45px;
 }
 
 footer .contact {
@@ -882,7 +885,7 @@ footer .contact {
     margin-top: 80px;
 }
 
-footer .contact h3 {
+footer .contact h3{
     font-size: 31px;
     font-weight: 500;
     text-align: right;

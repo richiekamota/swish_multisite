@@ -4,13 +4,19 @@
     <div class="map__categories">
         <% if $uniqueLocationCategories %>
         <ul>
-            <% loop $uniqueLocationCategories %>
             <li>
-                <label for="category_$name" class="map__category"  style="background-image: url($image.URL)">
-                    $name
-                    <input type="checkbox" name="mapCategories" value="$name" id="category_$name" onchange="changeMarkersCategory()" checked>
+                <label for="category_all" class="map__category"  style="background-image: url('{$ThemeDir}/images/map-all.jpg')">
+                    All
+                    <input type="checkbox" name="mapCategories" value="all" id="category_all" onchange="createMarkersArray('all')">
                 </label>
             </li>
+            <% loop $uniqueLocationCategories %>
+                <li>
+                    <label for="category_$name" class="map__category"  style="background-image: url($image.URL)">
+                        $name
+                        <input type="checkbox" name="mapCategories" value="$name" id="category_$name" onchange="createMarkersArray('$name')">
+                    </label>
+                </li>
             <% end_loop %>
         </ul>
         <% end_if %>
