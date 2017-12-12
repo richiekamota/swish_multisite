@@ -62,13 +62,14 @@
 
     .fade-overlay .overlay {
         float: none;
-        margin: 25% auto 0px;
+        margin: 40vh auto 0px;
         width: 80%;
         text-align: center;
     }
 
     .fade-overlay .overlay img {
         max-width: 400px;
+        width: 100%;
     }
 
     /* Media Queries */
@@ -90,7 +91,11 @@
 }
 
 .HomePage .navbar {
-    background: none
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+    border: none;
 }
 
 .navbar .navbar-brand {
