@@ -193,8 +193,9 @@
         display: block;
         position: absolute;
         border-top: none;
-        width: 200px;
+        width: 280px;
         z-index: 999;
+        right: 0;
     }
 
     .sub-links{
