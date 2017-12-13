@@ -14,7 +14,7 @@
                         <div class="col-lg-4">
                             <h2>$Title
                             <span>$Subtitle</span></h2>
-                            <% if $Type === 'Header Image' %>
+                            <% if $Type == 'Header Image' %>
                             $Image1
                             <% end_if %>
                         </div>
@@ -24,7 +24,7 @@
                     </div>
                     <% if Image1 && Image2 %>
                         <div class="row images">
-                            <% if not $Type === 'Header Image' %>
+                            <% if not $Type == 'Header Image' %>
                             <div class="col-lg-6">
                                 $Image1
                             </div>
