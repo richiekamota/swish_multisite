@@ -36,7 +36,7 @@
 
 
 
-<div class="home-banner" data-slides='["{$ThemeDir}/images/site{$SubsiteID}/banner1.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner2.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner3.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner4.jpg"]'>
+<div class="home-banner" data-slides='["{$ThemeDir}/images/site{$SubsiteID}/banner1.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner3.jpg","{$ThemeDir}/images/site{$SubsiteID}/banner4.jpg"]'>
     <div class="container"></div>
 </div>
 
