@@ -7,7 +7,7 @@ class ContentBlock extends DataObject
         'Title' => 'Varchar(255)',
         'Subtitle' => 'Varchar(255)',
         'Body' => 'HTMLText',
-        'Type' => 'Enum("Text,Single Image,Double Image")',
+        'Type' => 'Enum("Text,Single Image,Double Image, Header Image")',
         'SortID' => 'Int',
         'NavID' => 'Varchar(255)'
     );
