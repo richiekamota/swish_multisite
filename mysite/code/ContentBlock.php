@@ -7,7 +7,7 @@ class ContentBlock extends DataObject
         'Title' => 'Varchar(255)',
         'Subtitle' => 'Varchar(255)',
         'Body' => 'HTMLText',
-        'Type' => 'Enum("Text,Single Image,Double Image, Header Image")',
+        'Type' => 'Enum("Text,Single Image,Double Image")',
         'SortID' => 'Int',
         'NavID' => 'Varchar(255)'
     );
@@ -16,6 +16,7 @@ class ContentBlock extends DataObject
     public static $has_one = array(
         'Image1' => 'Image',
         'Image2' => 'Image',
+        'HeaderImage' => 'Image',
         'Areas' => 'Area'
     );
 
@@ -30,12 +31,15 @@ class ContentBlock extends DataObject
     public function getCMSFields()
     {
 
-        // Profile picture field
-        $thumbField = new UploadField('Image1', 'Image1');
-        $thumbField->allowedExtensions = array('jpg', 'png', 'gif');
+        // Image fields
+        $headerImageField = new UploadField('HeaderImage', 'Image to show under title');
+        $headerImageField->allowedExtensions = array('jpg', 'png', 'gif');
 
-        $imageField = new UploadField('Image2', 'Image');
-        $imageField->allowedExtensions = array('jpg', 'png', 'gif');
+        $imageOneField = new UploadField('Image1', 'Lower left image');
+        $imageOneField->allowedExtensions = array('jpg', 'png', 'gif');
+
+        $imageTwoField = new UploadField('Image2', 'lower right image');
+        $imageTwoField->allowedExtensions = array('jpg', 'png', 'gif');
 
         // Name, Description and Website fields
         return new FieldList(
@@ -43,8 +47,9 @@ class ContentBlock extends DataObject
             new TextField('Title', 'Title'),
             new TextField('Subtitle', 'Sub Title'),
             new HtmlEditorField('Body', 'Body'),
-            $thumbField,
-            $imageField
+            headerImageField,
+            $imageOneField,
+            $imageTwoField
 
         );
 

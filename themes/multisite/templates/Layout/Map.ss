@@ -35,7 +35,7 @@
           long: "$Long",
           description: '$Description',
           category: "$Category.Name",
-          image: "$Thumbnail.URL",
+          image: "$Thumbnail.PaddedImage(230, 150, FFFFFF).URL",
         });
     </script>
 <% end_loop %>

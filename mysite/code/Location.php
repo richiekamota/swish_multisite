@@ -7,6 +7,7 @@ class Location extends DataObject
         'Name' => 'Varchar(255)',
         'Lat' => 'Varchar(255)',
         'Long' => 'Varchar(255)',
+        'GoogleMapsLink' => 'Varchar(255)',
         'Description' => 'HTMLText',
         'SortID' => 'Int',
     );
@@ -22,6 +23,7 @@ class Location extends DataObject
     // Summary fields
     public static $summary_fields = array(
         'Name' => 'Name',
+        'Category' => 'Category',
         'Lat' => 'Lat',
         'Long' => 'Long'
     );
@@ -31,7 +33,7 @@ class Location extends DataObject
     public function getCMSFields()
     {
 
-        // Profile picture field
+        // Image fields
         $thumbField = new UploadField('Thumbnail', 'Thumbnail');
         $thumbField->allowedExtensions = array('jpg', 'png', 'gif');
 
@@ -44,6 +46,7 @@ class Location extends DataObject
             new TextField('Name', 'Name'),
             new TextField('Lat', 'Lat'),
             new TextField('Long', 'Long'),
+            new TextField('GoogleMapsLink', 'Google Map Link'),
             new DropdownField('CategoryID', 'Category', Category::get()->map('ID', 'Name')),
             $thumbField,
             $imageField,

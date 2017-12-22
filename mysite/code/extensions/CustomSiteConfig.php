@@ -5,11 +5,13 @@ class CustomSiteConfig extends DataExtension {
 
     public static $db = array(
         'FooterAddress' => 'HTMLText',
-        'PropertyLocation' => 'HTMLText'
+        'PropertyLocation' => 'HTMLText',
+        'GoogleAnalyticsTrackingID' => 'Varchar(11)' 
     );
 
     public function updateCMSFields(FieldList $fields) {
 
+        $fields->addFieldToTab('Root.Main', TextField::create('GoogleAnalyticsTrackingID')->setDescription('e.g. UA-XXXXX-XX'));
         $fields->addFieldToTab('Root.Main', new HtmlEditorField('FooterAddress', 'Footer Address'));
         $fields->addFieldToTab('Root.Main', new HtmlEditorField('PropertyLocation', 'Property Address'));
 

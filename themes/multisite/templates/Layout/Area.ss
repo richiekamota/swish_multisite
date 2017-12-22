@@ -14,8 +14,8 @@
                         <div class="col-lg-4">
                             <h2>$Title
                             <span>$Subtitle</span></h2>
-                            <% if $Type == 'Header Image' %>
-                            $Image1
+                            <% if $HeaderImage%>
+                            $HeaderImage.PaddedImage(430,270, FFFFFF)
                             <% end_if %>
                         </div>
                         <div class="col-lg-8">
@@ -24,13 +24,11 @@
                     </div>
                     <% if Image1 && Image2 %>
                         <div class="row images">
-                            <% if not $Type == 'Header Image' %>
                             <div class="col-lg-6">
-                                $Image1
+                                $Image1.PaddedImage(660,444, FFFFFF)
                             </div>
-                            <% end_if %>
                             <div class="col-lg-6">
-                                $Image2
+                                $Image2.PaddedImage(660,444, FFFFFF)
                             </div>
                         </div>
                     <% end_if %>
