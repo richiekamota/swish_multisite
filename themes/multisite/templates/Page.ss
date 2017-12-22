@@ -21,9 +21,8 @@
     <% require themedCSS('bootstrap.min') %>
     <% require themedCSS('font-awesome.min') %>
     <% require themedCSS('custom') %>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
     <% if $SiteConfig.GoogleAnalyticsTrackingID %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=$SiteConfig.GoogleAnalyticsTrackingID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
