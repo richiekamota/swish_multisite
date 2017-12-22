@@ -23,6 +23,7 @@
     <% require themedCSS('custom') %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
+    <% if $SiteConfig.GoogleAnalyticsTrackingID %>
     <script async src="https://www.googletagmanager.com/gtag/js?id=$SiteConfig.GoogleAnalyticsTrackingID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -30,6 +31,7 @@
       gtag('js', new Date());
       gtag('config', '$SiteConfig.GoogleAnalyticsTrackingID');
     </script>
+    <% end_if %>
 
 </head>
 <body class="$ClassName" id="Page{$ID}">
