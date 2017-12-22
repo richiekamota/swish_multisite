@@ -33,7 +33,7 @@
           name: "$Title",
           lat: "$Lat",
           long: "$Long",
-          description: '$Description',
+          description: '$Description <a href="$GoogleMapsLink" target="_blank">Google Maps</a>',
           category: "$Category.Name",
           image: "$Thumbnail.PaddedImage(230, 150, FFFFFF).URL",
         });

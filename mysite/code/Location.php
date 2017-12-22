@@ -23,7 +23,7 @@ class Location extends DataObject
     // Summary fields
     public static $summary_fields = array(
         'Name' => 'Name',
-        'Category' => 'Category',
+        'Category.Name' => 'Category',
         'Lat' => 'Lat',
         'Long' => 'Long'
     );

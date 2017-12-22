@@ -47,7 +47,7 @@ class ContentBlock extends DataObject
             new TextField('Title', 'Title'),
             new TextField('Subtitle', 'Sub Title'),
             new HtmlEditorField('Body', 'Body'),
-            headerImageField,
+            $headerImageField,
             $imageOneField,
             $imageTwoField
 
